@@ -1,0 +1,616 @@
+[p GLOBOPT AUTOSTATIC IEEE_DBL IEEE_FLT PIC14 PIC14E ]
+[d version 1.1 ]
+[d edition pro ]
+[d chip 16F1827 ]
+[d frameptr 6 ]
+"98 Z:\Software_Development\PIC16F1827\Nixie_Clock.X\mcc_generated_files/i2c1_slave.c
+[e E2516 . `uc
+I2C1_ADDR 0
+I2C1_TX 1
+I2C1_RX 2
+]
+"10 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcadd.c
+[v ___fladd __fladd `(d  1 e 4 0 ]
+"4 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\Umul8_16.c
+[v __Umul8_16 _Umul8_16 `(ui  1 e 2 0 ]
+"6 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\pic\__eeprom.c
+[v ___eecpymem __eecpymem `(v  1 e 1 0 ]
+"39
+[v ___memcpyee __memcpyee `(v  1 e 1 0 ]
+"28 Z:\Software_Development\PIC16F1827\Nixie_Clock.X\main.c
+[v _Timer_ISR Timer_ISR `(v  1 e 1 0 ]
+"67
+[v _I2C1_ReadISR I2C1_ReadISR `(v  1 s 1 I2C1_ReadISR ]
+"72
+[v _I2C1_AddrISR I2C1_AddrISR `(v  1 s 1 I2C1_AddrISR ]
+"76
+[v _main main `(v  1 e 1 0 ]
+"104 Z:\Software_Development\PIC16F1827\Nixie_Clock.X\mcc_generated_files/i2c1_slave.c
+[v _I2C1_Initialize I2C1_Initialize `(v  1 e 1 0 ]
+"112
+[v _I2C1_Open I2C1_Open `(v  1 e 1 0 ]
+"156
+[v _I2C1_Isr I2C1_Isr `(v  1 s 1 I2C1_Isr ]
+"209
+[v _I2C1_SlaveSetIsrHandler I2C1_SlaveSetIsrHandler `(v  1 e 1 0 ]
+"215
+[v _I2C1_SlaveSetReadIntHandler I2C1_SlaveSetReadIntHandler `(v  1 e 1 0 ]
+"219
+[v _I2C1_SlaveRdCallBack I2C1_SlaveRdCallBack `(v  1 s 1 I2C1_SlaveRdCallBack ]
+"227
+[v _I2C1_SlaveDefRdInterruptHandler I2C1_SlaveDefRdInterruptHandler `(v  1 s 1 I2C1_SlaveDefRdInterruptHandler ]
+"232
+[v _I2C1_SlaveSetWriteIntHandler I2C1_SlaveSetWriteIntHandler `(v  1 e 1 0 ]
+"236
+[v _I2C1_SlaveWrCallBack I2C1_SlaveWrCallBack `(v  1 s 1 I2C1_SlaveWrCallBack ]
+"244
+[v _I2C1_SlaveDefWrInterruptHandler I2C1_SlaveDefWrInterruptHandler `(v  1 s 1 I2C1_SlaveDefWrInterruptHandler ]
+"249
+[v _I2C1_SlaveSetAddrIntHandler I2C1_SlaveSetAddrIntHandler `(v  1 e 1 0 ]
+"253
+[v _I2C1_SlaveAddrCallBack I2C1_SlaveAddrCallBack `(v  1 s 1 I2C1_SlaveAddrCallBack ]
+"260
+[v _I2C1_SlaveDefAddrInterruptHandler I2C1_SlaveDefAddrInterruptHandler `(v  1 s 1 I2C1_SlaveDefAddrInterruptHandler ]
+"265
+[v _I2C1_SlaveSetWrColIntHandler I2C1_SlaveSetWrColIntHandler `(v  1 e 1 0 ]
+"269
+[v _I2C1_SlaveWrColCallBack I2C1_SlaveWrColCallBack `(v  1 s 1 I2C1_SlaveWrColCallBack ]
+"277
+[v _I2C1_SlaveDefWrColInterruptHandler I2C1_SlaveDefWrColInterruptHandler `(v  1 s 1 I2C1_SlaveDefWrColInterruptHandler ]
+"281
+[v _I2C1_SlaveSetBusColIntHandler I2C1_SlaveSetBusColIntHandler `(v  1 e 1 0 ]
+"293
+[v _I2C1_SlaveDefBusColInterruptHandler I2C1_SlaveDefBusColInterruptHandler `(v  1 s 1 I2C1_SlaveDefBusColInterruptHandler ]
+"296
+[v _I2C1_SlaveOpen I2C1_SlaveOpen `T(a  1 s 1 I2C1_SlaveOpen ]
+"309
+[v _I2C1_SlaveClose I2C1_SlaveClose `T(v  1 s 1 I2C1_SlaveClose ]
+"317
+[v _I2C1_SlaveSetSlaveAddr I2C1_SlaveSetSlaveAddr `T(v  1 s 1 I2C1_SlaveSetSlaveAddr ]
+"322
+[v _I2C1_SlaveSetSlaveMask I2C1_SlaveSetSlaveMask `T(v  1 s 1 I2C1_SlaveSetSlaveMask ]
+"327
+[v _I2C1_SlaveEnableIrq I2C1_SlaveEnableIrq `T(v  1 s 1 I2C1_SlaveEnableIrq ]
+"337
+[v _I2C1_SlaveIsRead I2C1_SlaveIsRead `T(a  1 s 1 I2C1_SlaveIsRead ]
+"342
+[v _I2C1_SlaveClearIrq I2C1_SlaveClearIrq `T(v  1 s 1 I2C1_SlaveClearIrq ]
+"347
+[v _I2C1_SlaveReleaseClock I2C1_SlaveReleaseClock `T(v  1 s 1 I2C1_SlaveReleaseClock ]
+"352
+[v _I2C1_SlaveIsWriteCollision I2C1_SlaveIsWriteCollision `T(a  1 s 1 I2C1_SlaveIsWriteCollision ]
+"357
+[v _I2C1_SlaveIsData I2C1_SlaveIsData `T(a  1 s 1 I2C1_SlaveIsData ]
+"362
+[v _I2C1_SlaveRestart I2C1_SlaveRestart `T(v  1 s 1 I2C1_SlaveRestart ]
+"377
+[v _I2C1_SlaveSendTxData I2C1_SlaveSendTxData `T(v  1 s 1 I2C1_SlaveSendTxData ]
+"382
+[v _I2C1_SlaveGetRxData I2C1_SlaveGetRxData `T(uc  1 s 1 I2C1_SlaveGetRxData ]
+"387
+[v _I2C1_SlaveGetAddr I2C1_SlaveGetAddr `T(uc  1 s 1 I2C1_SlaveGetAddr ]
+"392
+[v _I2C1_SlaveSendAck I2C1_SlaveSendAck `T(v  1 s 1 I2C1_SlaveSendAck ]
+"398
+[v _I2C1_SlaveSendNack I2C1_SlaveSendNack `T(v  1 s 1 I2C1_SlaveSendNack ]
+"52 Z:\Software_Development\PIC16F1827\Nixie_Clock.X\mcc_generated_files/interrupt_manager.c
+[v _INTERRUPT_InterruptManager INTERRUPT_InterruptManager `II(v  1 e 1 0 ]
+"50 Z:\Software_Development\PIC16F1827\Nixie_Clock.X\mcc_generated_files/mcc.c
+[v _SYSTEM_Initialize SYSTEM_Initialize `(v  1 e 1 0 ]
+"60
+[v _OSCILLATOR_Initialize OSCILLATOR_Initialize `(v  1 e 1 0 ]
+"70
+[v _WDT_Initialize WDT_Initialize `(v  1 e 1 0 ]
+"55 Z:\Software_Development\PIC16F1827\Nixie_Clock.X\mcc_generated_files/pin_manager.c
+[v _PIN_MANAGER_Initialize PIN_MANAGER_Initialize `(v  1 e 1 0 ]
+"64 Z:\Software_Development\PIC16F1827\Nixie_Clock.X\mcc_generated_files/tmr1.c
+[v _TMR1_Initialize TMR1_Initialize `(v  1 e 1 0 ]
+"93
+[v _TMR1_StartTimer TMR1_StartTimer `(v  1 e 1 0 ]
+"120
+[v _TMR1_WriteTimer TMR1_WriteTimer `(v  1 e 1 0 ]
+"157
+[v _TMR1_ISR TMR1_ISR `(v  1 e 1 0 ]
+"171
+[v _TMR1_SetInterruptHandler TMR1_SetInterruptHandler `(v  1 e 1 0 ]
+"175
+[v _TMR1_DefaultInterruptHandler TMR1_DefaultInterruptHandler `(v  1 e 1 0 ]
+"126 Z:\Software_Development\PIC16F1827\Nixie_Clock.X/mcc_generated_files/i2c1_slave.h
+[v _MSSP1_InterruptHandler MSSP1_InterruptHandler `*.37(v  1 e 2 0 ]
+"127
+[v _I2C1_SlaveRdInterruptHandler I2C1_SlaveRdInterruptHandler `*.37(v  1 e 2 0 ]
+"128
+[v _I2C1_SlaveWrInterruptHandler I2C1_SlaveWrInterruptHandler `*.37(v  1 e 2 0 ]
+"129
+[v _I2C1_SlaveAddrInterruptHandler I2C1_SlaveAddrInterruptHandler `*.37(v  1 e 2 0 ]
+"130
+[v _I2C1_SlaveBusColInterruptHandler I2C1_SlaveBusColInterruptHandler `*.37(v  1 e 2 0 ]
+"131
+[v _I2C1_SlaveWrColInterruptHandler I2C1_SlaveWrColInterruptHandler `*.37(v  1 e 2 0 ]
+[s S598 . 1 `uc 1 IOCIF 1 0 :1:0 
+`uc 1 INTF 1 0 :1:1 
+`uc 1 TMR0IF 1 0 :1:2 
+`uc 1 IOCIE 1 0 :1:3 
+`uc 1 INTE 1 0 :1:4 
+`uc 1 TMR0IE 1 0 :1:5 
+`uc 1 PEIE 1 0 :1:6 
+`uc 1 GIE 1 0 :1:7 
+]
+"374 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1827.h
+[s S607 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 T0IF 1 0 :1:2 
+`uc 1 . 1 0 :2:3 
+`uc 1 T0IE 1 0 :1:5 
+]
+[u S612 . 1 `S598 1 . 1 0 `S607 1 . 1 0 ]
+[v _INTCONbits INTCONbits `VES612  1 e 1 @11 ]
+[s S26 . 1 `uc 1 TMR1IF 1 0 :1:0 
+`uc 1 TMR2IF 1 0 :1:1 
+`uc 1 CCP1IF 1 0 :1:2 
+`uc 1 SSP1IF 1 0 :1:3 
+`uc 1 TXIF 1 0 :1:4 
+`uc 1 RCIF 1 0 :1:5 
+`uc 1 ADIF 1 0 :1:6 
+`uc 1 TMR1GIF 1 0 :1:7 
+]
+"570
+[u S35 . 1 `S26 1 . 1 0 ]
+[v _PIR1bits PIR1bits `VES35  1 e 1 @17 ]
+[s S673 . 1 `uc 1 CCP2IF 1 0 :1:0 
+`uc 1 . 1 0 :2:1 
+`uc 1 BCL1IF 1 0 :1:3 
+`uc 1 EEIF 1 0 :1:4 
+`uc 1 C1IF 1 0 :1:5 
+`uc 1 C2IF 1 0 :1:6 
+`uc 1 OSFIF 1 0 :1:7 
+]
+"631
+[u S681 . 1 `S673 1 . 1 0 ]
+[v _PIR2bits PIR2bits `VES681  1 e 1 @18 ]
+"759
+[v _TMR1L TMR1L `VEuc  1 e 1 @22 ]
+"779
+[v _TMR1H TMR1H `VEuc  1 e 1 @23 ]
+"799
+[v _T1CON T1CON `VEuc  1 e 1 @24 ]
+[s S79 . 1 `uc 1 TMR1ON 1 0 :1:0 
+`uc 1 . 1 0 :1:1 
+`uc 1 nT1SYNC 1 0 :1:2 
+`uc 1 T1OSCEN 1 0 :1:3 
+`uc 1 T1CKPS0 1 0 :1:4 
+`uc 1 T1CKPS1 1 0 :1:5 
+`uc 1 TMR1CS0 1 0 :1:6 
+`uc 1 TMR1CS1 1 0 :1:7 
+]
+"821
+[s S88 . 1 `uc 1 . 1 0 :4:0 
+`uc 1 T1CKPS 1 0 :2:4 
+`uc 1 TMR1CS 1 0 :2:6 
+]
+[u S92 . 1 `S79 1 . 1 0 `S88 1 . 1 0 ]
+[v _T1CONbits T1CONbits `VES92  1 e 1 @24 ]
+"871
+[v _T1GCON T1GCON `VEuc  1 e 1 @25 ]
+[s S109 . 1 `uc 1 T1GSS0 1 0 :1:0 
+`uc 1 T1GSS1 1 0 :1:1 
+`uc 1 T1GVAL 1 0 :1:2 
+`uc 1 T1GGO 1 0 :1:3 
+`uc 1 T1GSPM 1 0 :1:4 
+`uc 1 T1GTM 1 0 :1:5 
+`uc 1 T1GPOL 1 0 :1:6 
+`uc 1 TMR1GE 1 0 :1:7 
+]
+"891
+[s S118 . 1 `uc 1 T1GSS 1 0 :2:0 
+]
+[u S120 . 1 `S109 1 . 1 0 `S118 1 . 1 0 ]
+[v _T1GCONbits T1GCONbits `VES120  1 e 1 @25 ]
+"1152
+[v _TRISA TRISA `VEuc  1 e 1 @140 ]
+"1214
+[v _TRISB TRISB `VEuc  1 e 1 @141 ]
+[s S47 . 1 `uc 1 TMR1IE 1 0 :1:0 
+`uc 1 TMR2IE 1 0 :1:1 
+`uc 1 CCP1IE 1 0 :1:2 
+`uc 1 SSP1IE 1 0 :1:3 
+`uc 1 TXIE 1 0 :1:4 
+`uc 1 RCIE 1 0 :1:5 
+`uc 1 ADIE 1 0 :1:6 
+`uc 1 TMR1GIE 1 0 :1:7 
+]
+"1293
+[u S56 . 1 `S47 1 . 1 0 ]
+[v _PIE1bits PIE1bits `VES56  1 e 1 @145 ]
+[s S654 . 1 `uc 1 CCP2IE 1 0 :1:0 
+`uc 1 . 1 0 :2:1 
+`uc 1 BCL1IE 1 0 :1:3 
+`uc 1 EEIE 1 0 :1:4 
+`uc 1 C1IE 1 0 :1:5 
+`uc 1 C2IE 1 0 :1:6 
+`uc 1 OSFIE 1 0 :1:7 
+]
+"1354
+[u S662 . 1 `S654 1 . 1 0 ]
+[v _PIE2bits PIE2bits `VES662  1 e 1 @146 ]
+[s S770 . 1 `uc 1 PS0 1 0 :1:0 
+`uc 1 PS1 1 0 :1:1 
+`uc 1 PS2 1 0 :1:2 
+`uc 1 PSA 1 0 :1:3 
+`uc 1 TMR0SE 1 0 :1:4 
+`uc 1 TMR0CS 1 0 :1:5 
+`uc 1 INTEDG 1 0 :1:6 
+`uc 1 nWPUEN 1 0 :1:7 
+]
+"1478
+[s S779 . 1 `uc 1 PS 1 0 :3:0 
+`uc 1 . 1 0 :1:3 
+`uc 1 T0SE 1 0 :1:4 
+`uc 1 T0CS 1 0 :1:5 
+]
+[u S784 . 1 `S770 1 . 1 0 `S779 1 . 1 0 ]
+[v _OPTION_REGbits OPTION_REGbits `VES784  1 e 1 @149 ]
+"1589
+[v _WDTCON WDTCON `VEuc  1 e 1 @151 ]
+"1648
+[v _OSCTUNE OSCTUNE `VEuc  1 e 1 @152 ]
+"1706
+[v _OSCCON OSCCON `VEuc  1 e 1 @153 ]
+"2039
+[v _LATA LATA `VEuc  1 e 1 @268 ]
+[s S820 . 1 `uc 1 LATA0 1 0 :1:0 
+`uc 1 LATA1 1 0 :1:1 
+`uc 1 LATA2 1 0 :1:2 
+`uc 1 LATA3 1 0 :1:3 
+`uc 1 LATA4 1 0 :1:4 
+`uc 1 . 1 0 :1:5 
+`uc 1 LATA6 1 0 :1:6 
+`uc 1 LATA7 1 0 :1:7 
+]
+"2056
+[u S829 . 1 `S820 1 . 1 0 ]
+[v _LATAbits LATAbits `VES829  1 e 1 @268 ]
+"2096
+[v _LATB LATB `VEuc  1 e 1 @269 ]
+[s S841 . 1 `uc 1 LATB0 1 0 :1:0 
+`uc 1 LATB1 1 0 :1:1 
+`uc 1 LATB2 1 0 :1:2 
+`uc 1 LATB3 1 0 :1:3 
+`uc 1 LATB4 1 0 :1:4 
+`uc 1 LATB5 1 0 :1:5 
+`uc 1 LATB6 1 0 :1:6 
+`uc 1 LATB7 1 0 :1:7 
+]
+"2113
+[u S850 . 1 `S841 1 . 1 0 ]
+[v _LATBbits LATBbits `VES850  1 e 1 @269 ]
+"2430
+[v _BORCON BORCON `VEuc  1 e 1 @278 ]
+"2779
+[v _APFCON0 APFCON0 `VEuc  1 e 1 @285 ]
+"2841
+[v _APFCON1 APFCON1 `VEuc  1 e 1 @286 ]
+"2861
+[v _ANSELA ANSELA `VEuc  1 e 1 @396 ]
+"2913
+[v _ANSELB ANSELB `VEuc  1 e 1 @397 ]
+"3487
+[v _WPUA WPUA `VEuc  1 e 1 @524 ]
+"3516
+[v _WPUB WPUB `VEuc  1 e 1 @525 ]
+"3586
+[v _SSP1BUF SSP1BUF `VEuc  1 e 1 @529 ]
+"3624
+[v _SSP1ADD SSP1ADD `VEuc  1 e 1 @530 ]
+"3662
+[v _SSP1MSK SSP1MSK `VEuc  1 e 1 @531 ]
+"3700
+[v _SSP1STAT SSP1STAT `VEuc  1 e 1 @532 ]
+[s S423 . 1 `uc 1 BF 1 0 :1:0 
+`uc 1 UA 1 0 :1:1 
+`uc 1 R_nW 1 0 :1:2 
+`uc 1 S 1 0 :1:3 
+`uc 1 P 1 0 :1:4 
+`uc 1 D_nA 1 0 :1:5 
+`uc 1 CKE 1 0 :1:6 
+`uc 1 SMP 1 0 :1:7 
+]
+"3722
+[u S432 . 1 `S423 1 . 1 0 ]
+[v _SSP1STATbits SSP1STATbits `VES432  1 e 1 @532 ]
+"3822
+[v _SSP1CON1 SSP1CON1 `VEuc  1 e 1 @533 ]
+[s S207 . 1 `uc 1 SSPM0 1 0 :1:0 
+`uc 1 SSPM1 1 0 :1:1 
+`uc 1 SSPM2 1 0 :1:2 
+`uc 1 SSPM3 1 0 :1:3 
+`uc 1 CKP 1 0 :1:4 
+`uc 1 SSPEN 1 0 :1:5 
+`uc 1 SSPOV 1 0 :1:6 
+`uc 1 WCOL 1 0 :1:7 
+]
+"3851
+[s S216 . 1 `uc 1 SSPM 1 0 :4:0 
+]
+[u S218 . 1 `S207 1 . 1 0 `S216 1 . 1 0 ]
+[v _SSP1CON1bits SSP1CON1bits `VES218  1 e 1 @533 ]
+"4026
+[v _SSP1CON2 SSP1CON2 `VEuc  1 e 1 @534 ]
+[s S456 . 1 `uc 1 SEN 1 0 :1:0 
+`uc 1 RSEN 1 0 :1:1 
+`uc 1 PEN 1 0 :1:2 
+`uc 1 RCEN 1 0 :1:3 
+`uc 1 ACKEN 1 0 :1:4 
+`uc 1 ACKDT 1 0 :1:5 
+`uc 1 ACKSTAT 1 0 :1:6 
+`uc 1 GCEN 1 0 :1:7 
+]
+"4048
+[u S465 . 1 `S456 1 . 1 0 ]
+[v _SSP1CON2bits SSP1CON2bits `VES465  1 e 1 @534 ]
+"16 Z:\Software_Development\PIC16F1827\Nixie_Clock.X\main.c
+[v _DisplayVal DisplayVal `[6]uc  1 e 6 0 ]
+"17
+[v _DisplayNum DisplayNum `uc  1 e 1 0 ]
+"19
+[v _DisplayCnt DisplayCnt `ui  1 e 2 0 ]
+"22
+[v _I2C_ReadCnt I2C_ReadCnt `uc  1 e 1 0 ]
+"98 Z:\Software_Development\PIC16F1827\Nixie_Clock.X\mcc_generated_files/i2c1_slave.c
+[v _i2c1State i2c1State `VEE2516  1 s 1 i2c1State ]
+"99
+[v _i2c1NextState i2c1NextState `VEE2516  1 s 1 i2c1NextState ]
+"100
+[v _i2c1WrData i2c1WrData `VEuc  1 e 1 0 ]
+"101
+[v _i2c1RdData i2c1RdData `VEuc  1 e 1 0 ]
+"102
+[v _i2c1SlaveAddr i2c1SlaveAddr `VEuc  1 e 1 0 ]
+"57 Z:\Software_Development\PIC16F1827\Nixie_Clock.X\mcc_generated_files/tmr1.c
+[v _timer1ReloadVal timer1ReloadVal `VEus  1 e 2 0 ]
+"58
+[v _TMR1_InterruptHandler TMR1_InterruptHandler `*.37(v  1 e 2 0 ]
+"76 Z:\Software_Development\PIC16F1827\Nixie_Clock.X\main.c
+[v _main main `(v  1 e 1 0 ]
+{
+"100
+} 0
+"93 Z:\Software_Development\PIC16F1827\Nixie_Clock.X\mcc_generated_files/tmr1.c
+[v _TMR1_StartTimer TMR1_StartTimer `(v  1 e 1 0 ]
+{
+"97
+} 0
+"50 Z:\Software_Development\PIC16F1827\Nixie_Clock.X\mcc_generated_files/mcc.c
+[v _SYSTEM_Initialize SYSTEM_Initialize `(v  1 e 1 0 ]
+{
+"58
+} 0
+"70
+[v _WDT_Initialize WDT_Initialize `(v  1 e 1 0 ]
+{
+"74
+} 0
+"64 Z:\Software_Development\PIC16F1827\Nixie_Clock.X\mcc_generated_files/tmr1.c
+[v _TMR1_Initialize TMR1_Initialize `(v  1 e 1 0 ]
+{
+"91
+} 0
+"171
+[v _TMR1_SetInterruptHandler TMR1_SetInterruptHandler `(v  1 e 1 0 ]
+{
+[v TMR1_SetInterruptHandler@InterruptHandler InterruptHandler `*.37(v  1 p 2 0 ]
+"173
+} 0
+"55 Z:\Software_Development\PIC16F1827\Nixie_Clock.X\mcc_generated_files/pin_manager.c
+[v _PIN_MANAGER_Initialize PIN_MANAGER_Initialize `(v  1 e 1 0 ]
+{
+"94
+} 0
+"60 Z:\Software_Development\PIC16F1827\Nixie_Clock.X\mcc_generated_files/mcc.c
+[v _OSCILLATOR_Initialize OSCILLATOR_Initialize `(v  1 e 1 0 ]
+{
+"68
+} 0
+"104 Z:\Software_Development\PIC16F1827\Nixie_Clock.X\mcc_generated_files/i2c1_slave.c
+[v _I2C1_Initialize I2C1_Initialize `(v  1 e 1 0 ]
+{
+"110
+} 0
+"112
+[v _I2C1_Open I2C1_Open `(v  1 e 1 0 ]
+{
+"124
+} 0
+"232
+[v _I2C1_SlaveSetWriteIntHandler I2C1_SlaveSetWriteIntHandler `(v  1 e 1 0 ]
+{
+[v I2C1_SlaveSetWriteIntHandler@handler handler `*.37(v  1 p 2 0 ]
+"234
+} 0
+"265
+[v _I2C1_SlaveSetWrColIntHandler I2C1_SlaveSetWrColIntHandler `(v  1 e 1 0 ]
+{
+[v I2C1_SlaveSetWrColIntHandler@handler handler `*.37(v  1 p 2 0 ]
+"267
+} 0
+"322
+[v _I2C1_SlaveSetSlaveMask I2C1_SlaveSetSlaveMask `T(v  1 s 1 I2C1_SlaveSetSlaveMask ]
+{
+[v I2C1_SlaveSetSlaveMask@maskAddr maskAddr `uc  1 a 1 wreg ]
+[v I2C1_SlaveSetSlaveMask@maskAddr maskAddr `uc  1 a 1 wreg ]
+"324
+[v I2C1_SlaveSetSlaveMask@maskAddr maskAddr `uc  1 a 1 0 ]
+"325
+} 0
+"317
+[v _I2C1_SlaveSetSlaveAddr I2C1_SlaveSetSlaveAddr `T(v  1 s 1 I2C1_SlaveSetSlaveAddr ]
+{
+[v I2C1_SlaveSetSlaveAddr@slaveAddr slaveAddr `uc  1 a 1 wreg ]
+[v I2C1_SlaveSetSlaveAddr@slaveAddr slaveAddr `uc  1 a 1 wreg ]
+"319
+[v I2C1_SlaveSetSlaveAddr@slaveAddr slaveAddr `uc  1 a 1 0 ]
+"320
+} 0
+"215
+[v _I2C1_SlaveSetReadIntHandler I2C1_SlaveSetReadIntHandler `(v  1 e 1 0 ]
+{
+[v I2C1_SlaveSetReadIntHandler@handler handler `*.37(v  1 p 2 0 ]
+"217
+} 0
+"209
+[v _I2C1_SlaveSetIsrHandler I2C1_SlaveSetIsrHandler `(v  1 e 1 0 ]
+{
+[v I2C1_SlaveSetIsrHandler@handler handler `*.37(v  1 p 2 0 ]
+"212
+} 0
+"281
+[v _I2C1_SlaveSetBusColIntHandler I2C1_SlaveSetBusColIntHandler `(v  1 e 1 0 ]
+{
+[v I2C1_SlaveSetBusColIntHandler@handler handler `*.37(v  1 p 2 0 ]
+"283
+} 0
+"249
+[v _I2C1_SlaveSetAddrIntHandler I2C1_SlaveSetAddrIntHandler `(v  1 e 1 0 ]
+{
+[v I2C1_SlaveSetAddrIntHandler@handler handler `*.37(v  1 p 2 0 ]
+"251
+} 0
+"296
+[v _I2C1_SlaveOpen I2C1_SlaveOpen `T(a  1 s 1 I2C1_SlaveOpen ]
+{
+"307
+} 0
+"327
+[v _I2C1_SlaveEnableIrq I2C1_SlaveEnableIrq `T(v  1 s 1 I2C1_SlaveEnableIrq ]
+{
+"330
+} 0
+"52 Z:\Software_Development\PIC16F1827\Nixie_Clock.X\mcc_generated_files/interrupt_manager.c
+[v _INTERRUPT_InterruptManager INTERRUPT_InterruptManager `II(v  1 e 1 0 ]
+{
+"78
+} 0
+"157 Z:\Software_Development\PIC16F1827\Nixie_Clock.X\mcc_generated_files/tmr1.c
+[v _TMR1_ISR TMR1_ISR `(v  1 e 1 0 ]
+{
+"168
+} 0
+"175
+[v _TMR1_DefaultInterruptHandler TMR1_DefaultInterruptHandler `(v  1 e 1 0 ]
+{
+"178
+} 0
+"28 Z:\Software_Development\PIC16F1827\Nixie_Clock.X\main.c
+[v _Timer_ISR Timer_ISR `(v  1 e 1 0 ]
+{
+"65
+} 0
+"120 Z:\Software_Development\PIC16F1827\Nixie_Clock.X\mcc_generated_files/tmr1.c
+[v _TMR1_WriteTimer TMR1_WriteTimer `(v  1 e 1 0 ]
+{
+[v TMR1_WriteTimer@timerVal timerVal `us  1 p 2 0 ]
+"140
+} 0
+"156 Z:\Software_Development\PIC16F1827\Nixie_Clock.X\mcc_generated_files/i2c1_slave.c
+[v _I2C1_Isr I2C1_Isr `(v  1 s 1 I2C1_Isr ]
+{
+"206
+} 0
+"269
+[v _I2C1_SlaveWrColCallBack I2C1_SlaveWrColCallBack `(v  1 s 1 I2C1_SlaveWrColCallBack ]
+{
+"275
+} 0
+"277
+[v _I2C1_SlaveDefWrColInterruptHandler I2C1_SlaveDefWrColInterruptHandler `(v  1 s 1 I2C1_SlaveDefWrColInterruptHandler ]
+{
+"278
+} 0
+"236
+[v _I2C1_SlaveWrCallBack I2C1_SlaveWrCallBack `(v  1 s 1 I2C1_SlaveWrCallBack ]
+{
+"242
+} 0
+"244
+[v _I2C1_SlaveDefWrInterruptHandler I2C1_SlaveDefWrInterruptHandler `(v  1 s 1 I2C1_SlaveDefWrInterruptHandler ]
+{
+"246
+} 0
+"377
+[v _I2C1_SlaveSendTxData I2C1_SlaveSendTxData `T(v  1 s 1 I2C1_SlaveSendTxData ]
+{
+[v I2C1_SlaveSendTxData@data data `uc  1 a 1 wreg ]
+[v I2C1_SlaveSendTxData@data data `uc  1 a 1 wreg ]
+"379
+[v I2C1_SlaveSendTxData@data data `uc  1 a 1 0 ]
+"380
+} 0
+"362
+[v _I2C1_SlaveRestart I2C1_SlaveRestart `T(v  1 s 1 I2C1_SlaveRestart ]
+{
+"365
+} 0
+"347
+[v _I2C1_SlaveReleaseClock I2C1_SlaveReleaseClock `T(v  1 s 1 I2C1_SlaveReleaseClock ]
+{
+"350
+} 0
+"219
+[v _I2C1_SlaveRdCallBack I2C1_SlaveRdCallBack `(v  1 s 1 I2C1_SlaveRdCallBack ]
+{
+"225
+} 0
+"67 Z:\Software_Development\PIC16F1827\Nixie_Clock.X\main.c
+[v _I2C1_ReadISR I2C1_ReadISR `(v  1 s 1 I2C1_ReadISR ]
+{
+"70
+} 0
+"227 Z:\Software_Development\PIC16F1827\Nixie_Clock.X\mcc_generated_files/i2c1_slave.c
+[v _I2C1_SlaveDefRdInterruptHandler I2C1_SlaveDefRdInterruptHandler `(v  1 s 1 I2C1_SlaveDefRdInterruptHandler ]
+{
+"229
+} 0
+"382
+[v _I2C1_SlaveGetRxData I2C1_SlaveGetRxData `T(uc  1 s 1 I2C1_SlaveGetRxData ]
+{
+"385
+} 0
+"352
+[v _I2C1_SlaveIsWriteCollision I2C1_SlaveIsWriteCollision `T(a  1 s 1 I2C1_SlaveIsWriteCollision ]
+{
+"355
+} 0
+"337
+[v _I2C1_SlaveIsRead I2C1_SlaveIsRead `T(a  1 s 1 I2C1_SlaveIsRead ]
+{
+"340
+} 0
+"357
+[v _I2C1_SlaveIsData I2C1_SlaveIsData `T(a  1 s 1 I2C1_SlaveIsData ]
+{
+"360
+} 0
+"342
+[v _I2C1_SlaveClearIrq I2C1_SlaveClearIrq `T(v  1 s 1 I2C1_SlaveClearIrq ]
+{
+"345
+} 0
+"253
+[v _I2C1_SlaveAddrCallBack I2C1_SlaveAddrCallBack `(v  1 s 1 I2C1_SlaveAddrCallBack ]
+{
+"258
+} 0
+"72 Z:\Software_Development\PIC16F1827\Nixie_Clock.X\main.c
+[v _I2C1_AddrISR I2C1_AddrISR `(v  1 s 1 I2C1_AddrISR ]
+{
+"74
+} 0
+"260 Z:\Software_Development\PIC16F1827\Nixie_Clock.X\mcc_generated_files/i2c1_slave.c
+[v _I2C1_SlaveDefAddrInterruptHandler I2C1_SlaveDefAddrInterruptHandler `(v  1 s 1 I2C1_SlaveDefAddrInterruptHandler ]
+{
+"262
+} 0
+"387
+[v _I2C1_SlaveGetAddr I2C1_SlaveGetAddr `T(uc  1 s 1 I2C1_SlaveGetAddr ]
+{
+"390
+} 0

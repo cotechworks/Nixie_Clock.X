@@ -1,0 +1,1673 @@
+Version 4.0 HI-TECH Software Intermediate Code
+[v F70 `(v ~T0 @X0 0 tf ]
+[v F72 `(v ~T0 @X0 0 tf ]
+[v F74 `(v ~T0 @X0 0 tf ]
+[v F76 `(v ~T0 @X0 0 tf ]
+[v F78 `(v ~T0 @X0 0 tf ]
+[v F80 `(v ~T0 @X0 0 tf ]
+"98 mcc_generated_files/i2c1_slave.c
+[; ;mcc_generated_files/i2c1_slave.c: 98: static volatile i2c1_state_t i2c1State = I2C1_ADDR;
+[c E2516 0 1 2 .. ]
+[n E2516 . I2C1_ADDR I2C1_TX I2C1_RX  ]
+"3700 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1827.h
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1827.h: 3700: extern volatile unsigned char SSP1STAT __attribute__((address(0x214)));
+[v _SSP1STAT `Vuc ~T0 @X0 0 e@532 ]
+"3822
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1827.h: 3822: extern volatile unsigned char SSP1CON1 __attribute__((address(0x215)));
+[v _SSP1CON1 `Vuc ~T0 @X0 0 e@533 ]
+"4026
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1827.h: 4026: extern volatile unsigned char SSP1CON2 __attribute__((address(0x216)));
+[v _SSP1CON2 `Vuc ~T0 @X0 0 e@534 ]
+"3837
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1827.h: 3837:     struct {
+[s S208 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S208 . SSPM0 SSPM1 SSPM2 SSPM3 CKP SSPEN SSPOV WCOL ]
+"3847
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1827.h: 3847:     struct {
+[s S209 :4 `uc 1 ]
+[n S209 . SSPM ]
+"3836
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1827.h: 3836: typedef union {
+[u S207 `S208 1 `S209 1 ]
+[n S207 . . . ]
+"3851
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1827.h: 3851: extern volatile SSP1CON1bits_t SSP1CON1bits __attribute__((address(0x215)));
+[v _SSP1CON1bits `VS207 ~T0 @X0 0 e@533 ]
+[v F2533 `(a ~T0 @X0 1 tf ]
+"76 mcc_generated_files/i2c1_slave.c
+[; ;mcc_generated_files/i2c1_slave.c: 76: static __attribute__((inline)) _Bool I2C1_SlaveOpen();
+[v _I2C1_SlaveOpen `TF2533 ~T0 @X0 0 s ]
+[v F2537 `(v ~T0 @X0 1 tf1`uc ]
+"78
+[; ;mcc_generated_files/i2c1_slave.c: 78: static __attribute__((inline)) void I2C1_SlaveSetSlaveAddr(uint8_t slaveAddr);
+[v _I2C1_SlaveSetSlaveAddr `TF2537 ~T0 @X0 0 s ]
+[v F2540 `(v ~T0 @X0 1 tf1`uc ]
+"79
+[; ;mcc_generated_files/i2c1_slave.c: 79: static __attribute__((inline)) void I2C1_SlaveSetSlaveMask(uint8_t maskAddr);
+[v _I2C1_SlaveSetSlaveMask `TF2540 ~T0 @X0 0 s ]
+[v F46 `(v ~T0 @X0 0 tf ]
+"119 mcc_generated_files/i2c1_slave.h
+[; ;mcc_generated_files/i2c1_slave.h: 119: void I2C1_SlaveSetIsrHandler(interruptHandler handler);
+[v _I2C1_SlaveSetIsrHandler `(v ~T0 @X0 0 ef1`*F46 ]
+"63 mcc_generated_files/i2c1_slave.c
+[; ;mcc_generated_files/i2c1_slave.c: 63: static void I2C1_Isr(void);
+[v _I2C1_Isr `(v ~T0 @X0 0 sf ]
+[v F62 `(v ~T0 @X0 0 tf ]
+"123 mcc_generated_files/i2c1_slave.h
+[; ;mcc_generated_files/i2c1_slave.h: 123: void I2C1_SlaveSetBusColIntHandler(interruptHandler handler);
+[v _I2C1_SlaveSetBusColIntHandler `(v ~T0 @X0 0 ef1`*F62 ]
+"68 mcc_generated_files/i2c1_slave.c
+[; ;mcc_generated_files/i2c1_slave.c: 68: static void I2C1_SlaveDefBusColInterruptHandler(void);
+[v _I2C1_SlaveDefBusColInterruptHandler `(v ~T0 @X0 0 sf ]
+[v F58 `(v ~T0 @X0 0 tf ]
+"122 mcc_generated_files/i2c1_slave.h
+[; ;mcc_generated_files/i2c1_slave.h: 122: void I2C1_SlaveSetWriteIntHandler(interruptHandler handler);
+[v _I2C1_SlaveSetWriteIntHandler `(v ~T0 @X0 0 ef1`*F58 ]
+"65 mcc_generated_files/i2c1_slave.c
+[; ;mcc_generated_files/i2c1_slave.c: 65: static void I2C1_SlaveDefWrInterruptHandler(void);
+[v _I2C1_SlaveDefWrInterruptHandler `(v ~T0 @X0 0 sf ]
+[v F54 `(v ~T0 @X0 0 tf ]
+"121 mcc_generated_files/i2c1_slave.h
+[; ;mcc_generated_files/i2c1_slave.h: 121: void I2C1_SlaveSetReadIntHandler(interruptHandler handler);
+[v _I2C1_SlaveSetReadIntHandler `(v ~T0 @X0 0 ef1`*F54 ]
+"64 mcc_generated_files/i2c1_slave.c
+[; ;mcc_generated_files/i2c1_slave.c: 64: static void I2C1_SlaveDefRdInterruptHandler(void);
+[v _I2C1_SlaveDefRdInterruptHandler `(v ~T0 @X0 0 sf ]
+[v F50 `(v ~T0 @X0 0 tf ]
+"120 mcc_generated_files/i2c1_slave.h
+[; ;mcc_generated_files/i2c1_slave.h: 120: void I2C1_SlaveSetAddrIntHandler(interruptHandler handler);
+[v _I2C1_SlaveSetAddrIntHandler `(v ~T0 @X0 0 ef1`*F50 ]
+"66 mcc_generated_files/i2c1_slave.c
+[; ;mcc_generated_files/i2c1_slave.c: 66: static void I2C1_SlaveDefAddrInterruptHandler(void);
+[v _I2C1_SlaveDefAddrInterruptHandler `(v ~T0 @X0 0 sf ]
+[v F66 `(v ~T0 @X0 0 tf ]
+"124 mcc_generated_files/i2c1_slave.h
+[; ;mcc_generated_files/i2c1_slave.h: 124: void I2C1_SlaveSetWrColIntHandler(interruptHandler handler);
+[v _I2C1_SlaveSetWrColIntHandler `(v ~T0 @X0 0 ef1`*F66 ]
+"67 mcc_generated_files/i2c1_slave.c
+[; ;mcc_generated_files/i2c1_slave.c: 67: static void I2C1_SlaveDefWrColInterruptHandler(void);
+[v _I2C1_SlaveDefWrColInterruptHandler `(v ~T0 @X0 0 sf ]
+[v F2543 `(v ~T0 @X0 1 tf ]
+"80
+[; ;mcc_generated_files/i2c1_slave.c: 80: static __attribute__((inline)) void I2C1_SlaveEnableIrq(void);
+[v _I2C1_SlaveEnableIrq `TF2543 ~T0 @X0 0 s ]
+[v F2535 `(v ~T0 @X0 1 tf ]
+"77
+[; ;mcc_generated_files/i2c1_slave.c: 77: static __attribute__((inline)) void I2C1_SlaveClose();
+[v _I2C1_SlaveClose `TF2535 ~T0 @X0 0 s ]
+[v F2568 `(uc ~T0 @X0 1 tf ]
+"92
+[; ;mcc_generated_files/i2c1_slave.c: 92: static __attribute__((inline)) uint8_t I2C1_SlaveGetRxData(void);
+[v _I2C1_SlaveGetRxData `TF2568 ~T0 @X0 0 s ]
+[v F2565 `(v ~T0 @X0 1 tf1`uc ]
+"91
+[; ;mcc_generated_files/i2c1_slave.c: 91: static __attribute__((inline)) void I2C1_SlaveSendTxData(uint8_t data);
+[v _I2C1_SlaveSendTxData `TF2565 ~T0 @X0 0 s ]
+[v F2572 `(v ~T0 @X0 1 tf ]
+"94
+[; ;mcc_generated_files/i2c1_slave.c: 94: static __attribute__((inline)) void I2C1_SlaveSendAck(void);
+[v _I2C1_SlaveSendAck `TF2572 ~T0 @X0 0 s ]
+[v F2574 `(v ~T0 @X0 1 tf ]
+"95
+[; ;mcc_generated_files/i2c1_slave.c: 95: static __attribute__((inline)) void I2C1_SlaveSendNack(void);
+[v _I2C1_SlaveSendNack `TF2574 ~T0 @X0 0 s ]
+[v F2551 `(v ~T0 @X0 1 tf ]
+"84
+[; ;mcc_generated_files/i2c1_slave.c: 84: static __attribute__((inline)) void I2C1_SlaveClearIrq(void);
+[v _I2C1_SlaveClearIrq `TF2551 ~T0 @X0 0 s ]
+[v F2547 `(a ~T0 @X0 1 tf ]
+"82
+[; ;mcc_generated_files/i2c1_slave.c: 82: static __attribute__((inline)) _Bool I2C1_SlaveIsRead(void);
+[v _I2C1_SlaveIsRead `TF2547 ~T0 @X0 0 s ]
+[v F2555 `(a ~T0 @X0 1 tf ]
+"86
+[; ;mcc_generated_files/i2c1_slave.c: 86: static __attribute__((inline)) _Bool I2C1_SlaveIsWriteCollision(void);
+[v _I2C1_SlaveIsWriteCollision `TF2555 ~T0 @X0 0 s ]
+"71
+[; ;mcc_generated_files/i2c1_slave.c: 71: static void I2C1_SlaveWrCallBack(void);
+[v _I2C1_SlaveWrCallBack `(v ~T0 @X0 0 sf ]
+"73
+[; ;mcc_generated_files/i2c1_slave.c: 73: static void I2C1_SlaveWrColCallBack(void);
+[v _I2C1_SlaveWrColCallBack `(v ~T0 @X0 0 sf ]
+[v F2561 `(v ~T0 @X0 1 tf ]
+"89
+[; ;mcc_generated_files/i2c1_slave.c: 89: static __attribute__((inline)) void I2C1_SlaveRestart(void);
+[v _I2C1_SlaveRestart `TF2561 ~T0 @X0 0 s ]
+[v F2559 `(a ~T0 @X0 1 tf ]
+"88
+[; ;mcc_generated_files/i2c1_slave.c: 88: static __attribute__((inline)) _Bool I2C1_SlaveIsData(void);
+[v _I2C1_SlaveIsData `TF2559 ~T0 @X0 0 s ]
+"70
+[; ;mcc_generated_files/i2c1_slave.c: 70: static void I2C1_SlaveRdCallBack(void);
+[v _I2C1_SlaveRdCallBack `(v ~T0 @X0 0 sf ]
+"72
+[; ;mcc_generated_files/i2c1_slave.c: 72: static void I2C1_SlaveAddrCallBack(void);
+[v _I2C1_SlaveAddrCallBack `(v ~T0 @X0 0 sf ]
+[v F2553 `(v ~T0 @X0 1 tf ]
+"85
+[; ;mcc_generated_files/i2c1_slave.c: 85: static __attribute__((inline)) void I2C1_SlaveReleaseClock(void);
+[v _I2C1_SlaveReleaseClock `TF2553 ~T0 @X0 0 s ]
+[v F2597 `(v ~T0 @X0 0 tf ]
+[v F2599 `(v ~T0 @X0 0 tf ]
+[v F2602 `(v ~T0 @X0 0 tf ]
+[v F2604 `(v ~T0 @X0 0 tf ]
+[v F2607 `(v ~T0 @X0 0 tf ]
+[v F2610 `(v ~T0 @X0 0 tf ]
+[v F2612 `(v ~T0 @X0 0 tf ]
+[v F2615 `(v ~T0 @X0 0 tf ]
+[v F2618 `(v ~T0 @X0 0 tf ]
+[v F2620 `(v ~T0 @X0 0 tf ]
+[v F2623 `(v ~T0 @X0 0 tf ]
+[v F2570 `(uc ~T0 @X0 1 tf ]
+"93
+[; ;mcc_generated_files/i2c1_slave.c: 93: static __attribute__((inline)) uint8_t I2C1_SlaveGetAddr(void);
+[v _I2C1_SlaveGetAddr `TF2570 ~T0 @X0 0 s ]
+[v F2626 `(v ~T0 @X0 0 tf ]
+[v F2628 `(v ~T0 @X0 0 tf ]
+[v F2631 `(v ~T0 @X0 0 tf ]
+[v F2634 `(v ~T0 @X0 0 tf ]
+[v F2636 `(v ~T0 @X0 0 tf ]
+[v F2639 `(v ~T0 @X0 0 tf ]
+"3624 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1827.h
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1827.h: 3624: extern volatile unsigned char SSP1ADD __attribute__((address(0x212)));
+[v _SSP1ADD `Vuc ~T0 @X0 0 e@530 ]
+"3662
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1827.h: 3662: extern volatile unsigned char SSP1MSK __attribute__((address(0x213)));
+[v _SSP1MSK `Vuc ~T0 @X0 0 e@531 ]
+"1282
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1827.h: 1282:     struct {
+[s S75 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S75 . TMR1IE TMR2IE CCP1IE SSP1IE TXIE RCIE ADIE TMR1GIE ]
+"1281
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1827.h: 1281: typedef union {
+[u S74 `S75 1 ]
+[n S74 . . ]
+"1293
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1827.h: 1293: extern volatile PIE1bits_t PIE1bits __attribute__((address(0x091)));
+[v _PIE1bits `VS74 ~T0 @X0 0 e@145 ]
+"3711
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1827.h: 3711:     struct {
+[s S204 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S204 . BF UA R_nW S P D_nA CKE SMP ]
+"3710
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1827.h: 3710: typedef union {
+[u S203 `S204 1 ]
+[n S203 . . ]
+"3722
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1827.h: 3722: extern volatile SSP1STATbits_t SSP1STATbits __attribute__((address(0x214)));
+[v _SSP1STATbits `VS203 ~T0 @X0 0 e@532 ]
+"559
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1827.h: 559:     struct {
+[s S38 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S38 . TMR1IF TMR2IF CCP1IF SSP1IF TXIF RCIF ADIF TMR1GIF ]
+"558
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1827.h: 558: typedef union {
+[u S37 `S38 1 ]
+[n S37 . . ]
+"570
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1827.h: 570: extern volatile PIR1bits_t PIR1bits __attribute__((address(0x011)));
+[v _PIR1bits `VS37 ~T0 @X0 0 e@17 ]
+"4037
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1827.h: 4037:     struct {
+[s S217 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S217 . SEN RSEN PEN RCEN ACKEN ACKDT ACKSTAT GCEN ]
+"4036
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1827.h: 4036: typedef union {
+[u S216 `S217 1 ]
+[n S216 . . ]
+"4048
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1827.h: 4048: extern volatile SSP1CON2bits_t SSP1CON2bits __attribute__((address(0x216)));
+[v _SSP1CON2bits `VS216 ~T0 @X0 0 e@534 ]
+"3586
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1827.h: 3586: extern volatile unsigned char SSP1BUF __attribute__((address(0x211)));
+[v _SSP1BUF `Vuc ~T0 @X0 0 e@529 ]
+"126 mcc_generated_files/i2c1_slave.h
+[; ;mcc_generated_files/i2c1_slave.h: 126: void (*MSSP1_InterruptHandler)(void);
+[v _MSSP1_InterruptHandler `*F70 ~T0 @X0 1 e ]
+"127
+[; ;mcc_generated_files/i2c1_slave.h: 127: void (*I2C1_SlaveRdInterruptHandler)(void);
+[v _I2C1_SlaveRdInterruptHandler `*F72 ~T0 @X0 1 e ]
+"128
+[; ;mcc_generated_files/i2c1_slave.h: 128: void (*I2C1_SlaveWrInterruptHandler)(void);
+[v _I2C1_SlaveWrInterruptHandler `*F74 ~T0 @X0 1 e ]
+"129
+[; ;mcc_generated_files/i2c1_slave.h: 129: void (*I2C1_SlaveAddrInterruptHandler)(void);
+[v _I2C1_SlaveAddrInterruptHandler `*F76 ~T0 @X0 1 e ]
+"130
+[; ;mcc_generated_files/i2c1_slave.h: 130: void (*I2C1_SlaveBusColInterruptHandler)(void);
+[v _I2C1_SlaveBusColInterruptHandler `*F78 ~T0 @X0 1 e ]
+"131
+[; ;mcc_generated_files/i2c1_slave.h: 131: void (*I2C1_SlaveWrColInterruptHandler)(void);
+[v _I2C1_SlaveWrColInterruptHandler `*F80 ~T0 @X0 1 e ]
+"54 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1827.h
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1827.h: 54: __asm("INDF0 equ 00h");
+[; <" INDF0 equ 00h ;# ">
+"74
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1827.h: 74: __asm("INDF1 equ 01h");
+[; <" INDF1 equ 01h ;# ">
+"94
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1827.h: 94: __asm("PCL equ 02h");
+[; <" PCL equ 02h ;# ">
+"114
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1827.h: 114: __asm("STATUS equ 03h");
+[; <" STATUS equ 03h ;# ">
+"177
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1827.h: 177: __asm("FSR0L equ 04h");
+[; <" FSR0L equ 04h ;# ">
+"197
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1827.h: 197: __asm("FSR0H equ 05h");
+[; <" FSR0H equ 05h ;# ">
+"221
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1827.h: 221: __asm("FSR1L equ 06h");
+[; <" FSR1L equ 06h ;# ">
+"241
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1827.h: 241: __asm("FSR1H equ 07h");
+[; <" FSR1H equ 07h ;# ">
+"261
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1827.h: 261: __asm("BSR equ 08h");
+[; <" BSR equ 08h ;# ">
+"313
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1827.h: 313: __asm("WREG equ 09h");
+[; <" WREG equ 09h ;# ">
+"333
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1827.h: 333: __asm("PCLATH equ 0Ah");
+[; <" PCLATH equ 0Ah ;# ">
+"353
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1827.h: 353: __asm("INTCON equ 0Bh");
+[; <" INTCON equ 0Bh ;# ">
+"431
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1827.h: 431: __asm("PORTA equ 0Ch");
+[; <" PORTA equ 0Ch ;# ">
+"493
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1827.h: 493: __asm("PORTB equ 0Dh");
+[; <" PORTB equ 0Dh ;# ">
+"555
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1827.h: 555: __asm("PIR1 equ 011h");
+[; <" PIR1 equ 011h ;# ">
+"617
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1827.h: 617: __asm("PIR2 equ 012h");
+[; <" PIR2 equ 012h ;# ">
+"668
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1827.h: 668: __asm("PIR3 equ 013h");
+[; <" PIR3 equ 013h ;# ">
+"708
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1827.h: 708: __asm("PIR4 equ 014h");
+[; <" PIR4 equ 014h ;# ">
+"734
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1827.h: 734: __asm("TMR0 equ 015h");
+[; <" TMR0 equ 015h ;# ">
+"754
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1827.h: 754: __asm("TMR1 equ 016h");
+[; <" TMR1 equ 016h ;# ">
+"761
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1827.h: 761: __asm("TMR1L equ 016h");
+[; <" TMR1L equ 016h ;# ">
+"781
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1827.h: 781: __asm("TMR1H equ 017h");
+[; <" TMR1H equ 017h ;# ">
+"801
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1827.h: 801: __asm("T1CON equ 018h");
+[; <" T1CON equ 018h ;# ">
+"873
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1827.h: 873: __asm("T1GCON equ 019h");
+[; <" T1GCON equ 019h ;# ">
+"943
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1827.h: 943: __asm("TMR2 equ 01Ah");
+[; <" TMR2 equ 01Ah ;# ">
+"963
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1827.h: 963: __asm("PR2 equ 01Bh");
+[; <" PR2 equ 01Bh ;# ">
+"983
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1827.h: 983: __asm("T2CON equ 01Ch");
+[; <" T2CON equ 01Ch ;# ">
+"1054
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1827.h: 1054: __asm("CPSCON0 equ 01Eh");
+[; <" CPSCON0 equ 01Eh ;# ">
+"1108
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1827.h: 1108: __asm("CPSCON1 equ 01Fh");
+[; <" CPSCON1 equ 01Fh ;# ">
+"1154
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1827.h: 1154: __asm("TRISA equ 08Ch");
+[; <" TRISA equ 08Ch ;# ">
+"1216
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1827.h: 1216: __asm("TRISB equ 08Dh");
+[; <" TRISB equ 08Dh ;# ">
+"1278
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1827.h: 1278: __asm("PIE1 equ 091h");
+[; <" PIE1 equ 091h ;# ">
+"1340
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1827.h: 1340: __asm("PIE2 equ 092h");
+[; <" PIE2 equ 092h ;# ">
+"1391
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1827.h: 1391: __asm("PIE3 equ 093h");
+[; <" PIE3 equ 093h ;# ">
+"1431
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1827.h: 1431: __asm("PIE4 equ 094h");
+[; <" PIE4 equ 094h ;# ">
+"1457
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1827.h: 1457: __asm("OPTION_REG equ 095h");
+[; <" OPTION_REG equ 095h ;# ">
+"1540
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1827.h: 1540: __asm("PCON equ 096h");
+[; <" PCON equ 096h ;# ">
+"1591
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1827.h: 1591: __asm("WDTCON equ 097h");
+[; <" WDTCON equ 097h ;# ">
+"1650
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1827.h: 1650: __asm("OSCTUNE equ 098h");
+[; <" OSCTUNE equ 098h ;# ">
+"1708
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1827.h: 1708: __asm("OSCCON equ 099h");
+[; <" OSCCON equ 099h ;# ">
+"1780
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1827.h: 1780: __asm("OSCSTAT equ 09Ah");
+[; <" OSCSTAT equ 09Ah ;# ">
+"1842
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1827.h: 1842: __asm("ADRES equ 09Bh");
+[; <" ADRES equ 09Bh ;# ">
+"1849
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1827.h: 1849: __asm("ADRESL equ 09Bh");
+[; <" ADRESL equ 09Bh ;# ">
+"1869
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1827.h: 1869: __asm("ADRESH equ 09Ch");
+[; <" ADRESH equ 09Ch ;# ">
+"1889
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1827.h: 1889: __asm("ADCON0 equ 09Dh");
+[; <" ADCON0 equ 09Dh ;# ">
+"1969
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1827.h: 1969: __asm("ADCON1 equ 09Eh");
+[; <" ADCON1 equ 09Eh ;# ">
+"2041
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1827.h: 2041: __asm("LATA equ 010Ch");
+[; <" LATA equ 010Ch ;# ">
+"2098
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1827.h: 2098: __asm("LATB equ 010Dh");
+[; <" LATB equ 010Dh ;# ">
+"2160
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1827.h: 2160: __asm("CM1CON0 equ 0111h");
+[; <" CM1CON0 equ 0111h ;# ">
+"2217
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1827.h: 2217: __asm("CM1CON1 equ 0112h");
+[; <" CM1CON1 equ 0112h ;# ">
+"2283
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1827.h: 2283: __asm("CM2CON0 equ 0113h");
+[; <" CM2CON0 equ 0113h ;# ">
+"2340
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1827.h: 2340: __asm("CM2CON1 equ 0114h");
+[; <" CM2CON1 equ 0114h ;# ">
+"2406
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1827.h: 2406: __asm("CMOUT equ 0115h");
+[; <" CMOUT equ 0115h ;# ">
+"2432
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1827.h: 2432: __asm("BORCON equ 0116h");
+[; <" BORCON equ 0116h ;# ">
+"2459
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1827.h: 2459: __asm("FVRCON equ 0117h");
+[; <" FVRCON equ 0117h ;# ">
+"2535
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1827.h: 2535: __asm("DACCON0 equ 0118h");
+[; <" DACCON0 equ 0118h ;# ">
+"2596
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1827.h: 2596: __asm("DACCON1 equ 0119h");
+[; <" DACCON1 equ 0119h ;# ">
+"2648
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1827.h: 2648: __asm("SRCON0 equ 011Ah");
+[; <" SRCON0 equ 011Ah ;# ">
+"2719
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1827.h: 2719: __asm("SRCON1 equ 011Bh");
+[; <" SRCON1 equ 011Bh ;# ">
+"2781
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1827.h: 2781: __asm("APFCON0 equ 011Dh");
+[; <" APFCON0 equ 011Dh ;# ">
+"2843
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1827.h: 2843: __asm("APFCON1 equ 011Eh");
+[; <" APFCON1 equ 011Eh ;# ">
+"2863
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1827.h: 2863: __asm("ANSELA equ 018Ch");
+[; <" ANSELA equ 018Ch ;# ">
+"2915
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1827.h: 2915: __asm("ANSELB equ 018Dh");
+[; <" ANSELB equ 018Dh ;# ">
+"2980
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1827.h: 2980: __asm("EEADR equ 0191h");
+[; <" EEADR equ 0191h ;# ">
+"2987
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1827.h: 2987: __asm("EEADRL equ 0191h");
+[; <" EEADRL equ 0191h ;# ">
+"3007
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1827.h: 3007: __asm("EEADRH equ 0192h");
+[; <" EEADRH equ 0192h ;# ">
+"3027
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1827.h: 3027: __asm("EEDAT equ 0193h");
+[; <" EEDAT equ 0193h ;# ">
+"3034
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1827.h: 3034: __asm("EEDATL equ 0193h");
+[; <" EEDATL equ 0193h ;# ">
+"3039
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1827.h: 3039: __asm("EEDATA equ 0193h");
+[; <" EEDATA equ 0193h ;# ">
+"3072
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1827.h: 3072: __asm("EEDATH equ 0194h");
+[; <" EEDATH equ 0194h ;# ">
+"3092
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1827.h: 3092: __asm("EECON1 equ 0195h");
+[; <" EECON1 equ 0195h ;# ">
+"3154
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1827.h: 3154: __asm("EECON2 equ 0196h");
+[; <" EECON2 equ 0196h ;# ">
+"3174
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1827.h: 3174: __asm("RCREG equ 0199h");
+[; <" RCREG equ 0199h ;# ">
+"3194
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1827.h: 3194: __asm("TXREG equ 019Ah");
+[; <" TXREG equ 019Ah ;# ">
+"3214
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1827.h: 3214: __asm("SP1BRG equ 019Bh");
+[; <" SP1BRG equ 019Bh ;# ">
+"3221
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1827.h: 3221: __asm("SP1BRGL equ 019Bh");
+[; <" SP1BRGL equ 019Bh ;# ">
+"3226
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1827.h: 3226: __asm("SPBRG equ 019Bh");
+[; <" SPBRG equ 019Bh ;# ">
+"3230
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1827.h: 3230: __asm("SPBRGL equ 019Bh");
+[; <" SPBRGL equ 019Bh ;# ">
+"3275
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1827.h: 3275: __asm("SP1BRGH equ 019Ch");
+[; <" SP1BRGH equ 019Ch ;# ">
+"3280
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1827.h: 3280: __asm("SPBRGH equ 019Ch");
+[; <" SPBRGH equ 019Ch ;# ">
+"3313
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1827.h: 3313: __asm("RCSTA equ 019Dh");
+[; <" RCSTA equ 019Dh ;# ">
+"3375
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1827.h: 3375: __asm("TXSTA equ 019Eh");
+[; <" TXSTA equ 019Eh ;# ">
+"3437
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1827.h: 3437: __asm("BAUDCON equ 019Fh");
+[; <" BAUDCON equ 019Fh ;# ">
+"3489
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1827.h: 3489: __asm("WPUA equ 020Ch");
+[; <" WPUA equ 020Ch ;# ">
+"3518
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1827.h: 3518: __asm("WPUB equ 020Dh");
+[; <" WPUB equ 020Dh ;# ">
+"3588
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1827.h: 3588: __asm("SSP1BUF equ 0211h");
+[; <" SSP1BUF equ 0211h ;# ">
+"3593
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1827.h: 3593: __asm("SSPBUF equ 0211h");
+[; <" SSPBUF equ 0211h ;# ">
+"3626
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1827.h: 3626: __asm("SSP1ADD equ 0212h");
+[; <" SSP1ADD equ 0212h ;# ">
+"3631
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1827.h: 3631: __asm("SSPADD equ 0212h");
+[; <" SSPADD equ 0212h ;# ">
+"3664
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1827.h: 3664: __asm("SSP1MSK equ 0213h");
+[; <" SSP1MSK equ 0213h ;# ">
+"3669
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1827.h: 3669: __asm("SSPMSK equ 0213h");
+[; <" SSPMSK equ 0213h ;# ">
+"3702
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1827.h: 3702: __asm("SSP1STAT equ 0214h");
+[; <" SSP1STAT equ 0214h ;# ">
+"3707
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1827.h: 3707: __asm("SSPSTAT equ 0214h");
+[; <" SSPSTAT equ 0214h ;# ">
+"3824
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1827.h: 3824: __asm("SSP1CON1 equ 0215h");
+[; <" SSP1CON1 equ 0215h ;# ">
+"3829
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1827.h: 3829: __asm("SSPCON1 equ 0215h");
+[; <" SSPCON1 equ 0215h ;# ">
+"3833
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1827.h: 3833: __asm("SSPCON equ 0215h");
+[; <" SSPCON equ 0215h ;# ">
+"4028
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1827.h: 4028: __asm("SSP1CON2 equ 0216h");
+[; <" SSP1CON2 equ 0216h ;# ">
+"4033
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1827.h: 4033: __asm("SSPCON2 equ 0216h");
+[; <" SSPCON2 equ 0216h ;# ">
+"4150
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1827.h: 4150: __asm("SSP1CON3 equ 0217h");
+[; <" SSP1CON3 equ 0217h ;# ">
+"4155
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1827.h: 4155: __asm("SSPCON3 equ 0217h");
+[; <" SSPCON3 equ 0217h ;# ">
+"4272
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1827.h: 4272: __asm("SSP2BUF equ 0219h");
+[; <" SSP2BUF equ 0219h ;# ">
+"4292
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1827.h: 4292: __asm("SSP2ADD equ 021Ah");
+[; <" SSP2ADD equ 021Ah ;# ">
+"4312
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1827.h: 4312: __asm("SSP2MSK equ 021Bh");
+[; <" SSP2MSK equ 021Bh ;# ">
+"4332
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1827.h: 4332: __asm("SSP2STAT equ 021Ch");
+[; <" SSP2STAT equ 021Ch ;# ">
+"4394
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1827.h: 4394: __asm("SSP2CON1 equ 021Dh");
+[; <" SSP2CON1 equ 021Dh ;# ">
+"4464
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1827.h: 4464: __asm("SSP2CON2 equ 021Eh");
+[; <" SSP2CON2 equ 021Eh ;# ">
+"4526
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1827.h: 4526: __asm("SSP2CON3 equ 021Fh");
+[; <" SSP2CON3 equ 021Fh ;# ">
+"4588
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1827.h: 4588: __asm("CCPR1 equ 0291h");
+[; <" CCPR1 equ 0291h ;# ">
+"4595
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1827.h: 4595: __asm("CCPR1L equ 0291h");
+[; <" CCPR1L equ 0291h ;# ">
+"4615
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1827.h: 4615: __asm("CCPR1H equ 0292h");
+[; <" CCPR1H equ 0292h ;# ">
+"4635
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1827.h: 4635: __asm("CCP1CON equ 0293h");
+[; <" CCP1CON equ 0293h ;# ">
+"4717
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1827.h: 4717: __asm("PWM1CON equ 0294h");
+[; <" PWM1CON equ 0294h ;# ">
+"4787
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1827.h: 4787: __asm("CCP1AS equ 0295h");
+[; <" CCP1AS equ 0295h ;# ">
+"4792
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1827.h: 4792: __asm("ECCP1AS equ 0295h");
+[; <" ECCP1AS equ 0295h ;# ">
+"4949
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1827.h: 4949: __asm("PSTR1CON equ 0296h");
+[; <" PSTR1CON equ 0296h ;# ">
+"4993
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1827.h: 4993: __asm("CCPR2 equ 0298h");
+[; <" CCPR2 equ 0298h ;# ">
+"5000
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1827.h: 5000: __asm("CCPR2L equ 0298h");
+[; <" CCPR2L equ 0298h ;# ">
+"5020
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1827.h: 5020: __asm("CCPR2H equ 0299h");
+[; <" CCPR2H equ 0299h ;# ">
+"5040
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1827.h: 5040: __asm("CCP2CON equ 029Ah");
+[; <" CCP2CON equ 029Ah ;# ">
+"5122
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1827.h: 5122: __asm("PWM2CON equ 029Bh");
+[; <" PWM2CON equ 029Bh ;# ">
+"5192
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1827.h: 5192: __asm("CCP2AS equ 029Ch");
+[; <" CCP2AS equ 029Ch ;# ">
+"5197
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1827.h: 5197: __asm("ECCP2AS equ 029Ch");
+[; <" ECCP2AS equ 029Ch ;# ">
+"5354
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1827.h: 5354: __asm("PSTR2CON equ 029Dh");
+[; <" PSTR2CON equ 029Dh ;# ">
+"5398
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1827.h: 5398: __asm("CCPTMRS equ 029Eh");
+[; <" CCPTMRS equ 029Eh ;# ">
+"5403
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1827.h: 5403: __asm("CCPTMRS0 equ 029Eh");
+[; <" CCPTMRS0 equ 029Eh ;# ">
+"5572
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1827.h: 5572: __asm("CCPR3 equ 0311h");
+[; <" CCPR3 equ 0311h ;# ">
+"5579
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1827.h: 5579: __asm("CCPR3L equ 0311h");
+[; <" CCPR3L equ 0311h ;# ">
+"5599
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1827.h: 5599: __asm("CCPR3H equ 0312h");
+[; <" CCPR3H equ 0312h ;# ">
+"5619
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1827.h: 5619: __asm("CCP3CON equ 0313h");
+[; <" CCP3CON equ 0313h ;# ">
+"5683
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1827.h: 5683: __asm("CCPR4 equ 0318h");
+[; <" CCPR4 equ 0318h ;# ">
+"5690
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1827.h: 5690: __asm("CCPR4L equ 0318h");
+[; <" CCPR4L equ 0318h ;# ">
+"5710
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1827.h: 5710: __asm("CCPR4H equ 0319h");
+[; <" CCPR4H equ 0319h ;# ">
+"5730
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1827.h: 5730: __asm("CCP4CON equ 031Ah");
+[; <" CCP4CON equ 031Ah ;# ">
+"5794
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1827.h: 5794: __asm("IOCBP equ 0394h");
+[; <" IOCBP equ 0394h ;# ">
+"5864
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1827.h: 5864: __asm("IOCBN equ 0395h");
+[; <" IOCBN equ 0395h ;# ">
+"5934
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1827.h: 5934: __asm("IOCBF equ 0396h");
+[; <" IOCBF equ 0396h ;# ">
+"6004
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1827.h: 6004: __asm("CLKRCON equ 039Ah");
+[; <" CLKRCON equ 039Ah ;# ">
+"6080
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1827.h: 6080: __asm("MDCON equ 039Ch");
+[; <" MDCON equ 039Ch ;# ">
+"6131
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1827.h: 6131: __asm("MDSRC equ 039Dh");
+[; <" MDSRC equ 039Dh ;# ">
+"6184
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1827.h: 6184: __asm("MDCARL equ 039Eh");
+[; <" MDCARL equ 039Eh ;# ">
+"6249
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1827.h: 6249: __asm("MDCARH equ 039Fh");
+[; <" MDCARH equ 039Fh ;# ">
+"6314
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1827.h: 6314: __asm("TMR4 equ 0415h");
+[; <" TMR4 equ 0415h ;# ">
+"6334
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1827.h: 6334: __asm("PR4 equ 0416h");
+[; <" PR4 equ 0416h ;# ">
+"6354
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1827.h: 6354: __asm("T4CON equ 0417h");
+[; <" T4CON equ 0417h ;# ">
+"6425
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1827.h: 6425: __asm("TMR6 equ 041Ch");
+[; <" TMR6 equ 041Ch ;# ">
+"6445
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1827.h: 6445: __asm("PR6 equ 041Dh");
+[; <" PR6 equ 041Dh ;# ">
+"6465
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1827.h: 6465: __asm("T6CON equ 041Eh");
+[; <" T6CON equ 041Eh ;# ">
+"6536
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1827.h: 6536: __asm("STATUS_SHAD equ 0FE4h");
+[; <" STATUS_SHAD equ 0FE4h ;# ">
+"6568
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1827.h: 6568: __asm("WREG_SHAD equ 0FE5h");
+[; <" WREG_SHAD equ 0FE5h ;# ">
+"6588
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1827.h: 6588: __asm("BSR_SHAD equ 0FE6h");
+[; <" BSR_SHAD equ 0FE6h ;# ">
+"6608
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1827.h: 6608: __asm("PCLATH_SHAD equ 0FE7h");
+[; <" PCLATH_SHAD equ 0FE7h ;# ">
+"6628
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1827.h: 6628: __asm("FSR0L_SHAD equ 0FE8h");
+[; <" FSR0L_SHAD equ 0FE8h ;# ">
+"6648
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1827.h: 6648: __asm("FSR0H_SHAD equ 0FE9h");
+[; <" FSR0H_SHAD equ 0FE9h ;# ">
+"6668
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1827.h: 6668: __asm("FSR1L_SHAD equ 0FEAh");
+[; <" FSR1L_SHAD equ 0FEAh ;# ">
+"6688
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1827.h: 6688: __asm("FSR1H_SHAD equ 0FEBh");
+[; <" FSR1H_SHAD equ 0FEBh ;# ">
+"6708
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1827.h: 6708: __asm("STKPTR equ 0FEDh");
+[; <" STKPTR equ 0FEDh ;# ">
+"6728
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1827.h: 6728: __asm("TOSL equ 0FEEh");
+[; <" TOSL equ 0FEEh ;# ">
+"6748
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16f1827.h: 6748: __asm("TOSH equ 0FEFh");
+[; <" TOSH equ 0FEFh ;# ">
+"98 mcc_generated_files/i2c1_slave.c
+[; ;mcc_generated_files/i2c1_slave.c: 98: static volatile i2c1_state_t i2c1State = I2C1_ADDR;
+[v _i2c1State `VE2516 ~T0 @X0 1 s ]
+[i _i2c1State
+. `E2516 0
+]
+"99
+[; ;mcc_generated_files/i2c1_slave.c: 99: static volatile i2c1_state_t i2c1NextState = I2C1_ADDR;
+[v _i2c1NextState `VE2516 ~T0 @X0 1 s ]
+[i _i2c1NextState
+. `E2516 0
+]
+"100
+[; ;mcc_generated_files/i2c1_slave.c: 100: volatile uint8_t i2c1WrData;
+[v _i2c1WrData `Vuc ~T0 @X0 1 e ]
+"101
+[; ;mcc_generated_files/i2c1_slave.c: 101: volatile uint8_t i2c1RdData;
+[v _i2c1RdData `Vuc ~T0 @X0 1 e ]
+"102
+[; ;mcc_generated_files/i2c1_slave.c: 102: volatile uint8_t i2c1SlaveAddr;
+[v _i2c1SlaveAddr `Vuc ~T0 @X0 1 e ]
+"104
+[; ;mcc_generated_files/i2c1_slave.c: 104: void I2C1_Initialize()
+[v _I2C1_Initialize `(v ~T0 @X0 1 ef ]
+"105
+[; ;mcc_generated_files/i2c1_slave.c: 105: {
+{
+[e :U _I2C1_Initialize ]
+[f ]
+"106
+[; ;mcc_generated_files/i2c1_slave.c: 106:     SSP1STAT = 0x40;
+[e = _SSP1STAT -> -> 64 `i `uc ]
+"107
+[; ;mcc_generated_files/i2c1_slave.c: 107:     SSP1CON1 |= 0x16;
+[e =| _SSP1CON1 -> -> 22 `i `Vuc ]
+"108
+[; ;mcc_generated_files/i2c1_slave.c: 108:     SSP1CON2 = 0x00;
+[e = _SSP1CON2 -> -> 0 `i `uc ]
+"109
+[; ;mcc_generated_files/i2c1_slave.c: 109:     SSP1CON1bits.SSPEN = 0;
+[e = . . _SSP1CON1bits 0 5 -> -> 0 `i `uc ]
+"110
+[; ;mcc_generated_files/i2c1_slave.c: 110: }
+[e :UE 354 ]
+}
+"112
+[; ;mcc_generated_files/i2c1_slave.c: 112: void I2C1_Open()
+[v _I2C1_Open `(v ~T0 @X0 1 ef ]
+"113
+[; ;mcc_generated_files/i2c1_slave.c: 113: {
+{
+[e :U _I2C1_Open ]
+[f ]
+"114
+[; ;mcc_generated_files/i2c1_slave.c: 114:     I2C1_SlaveOpen();
+[e ( _I2C1_SlaveOpen ..  ]
+"115
+[; ;mcc_generated_files/i2c1_slave.c: 115:     I2C1_SlaveSetSlaveAddr(10 << 1);
+[e ( _I2C1_SlaveSetSlaveAddr (1 -> << -> 10 `i -> 1 `i `uc ]
+"116
+[; ;mcc_generated_files/i2c1_slave.c: 116:     I2C1_SlaveSetSlaveMask(10);
+[e ( _I2C1_SlaveSetSlaveMask (1 -> -> 10 `i `uc ]
+"117
+[; ;mcc_generated_files/i2c1_slave.c: 117:     I2C1_SlaveSetIsrHandler(I2C1_Isr);
+[e ( _I2C1_SlaveSetIsrHandler (1 &U _I2C1_Isr ]
+"118
+[; ;mcc_generated_files/i2c1_slave.c: 118:     I2C1_SlaveSetBusColIntHandler(I2C1_SlaveDefBusColInterruptHandler);
+[e ( _I2C1_SlaveSetBusColIntHandler (1 &U _I2C1_SlaveDefBusColInterruptHandler ]
+"119
+[; ;mcc_generated_files/i2c1_slave.c: 119:     I2C1_SlaveSetWriteIntHandler(I2C1_SlaveDefWrInterruptHandler);
+[e ( _I2C1_SlaveSetWriteIntHandler (1 &U _I2C1_SlaveDefWrInterruptHandler ]
+"120
+[; ;mcc_generated_files/i2c1_slave.c: 120:     I2C1_SlaveSetReadIntHandler(I2C1_SlaveDefRdInterruptHandler);
+[e ( _I2C1_SlaveSetReadIntHandler (1 &U _I2C1_SlaveDefRdInterruptHandler ]
+"121
+[; ;mcc_generated_files/i2c1_slave.c: 121:     I2C1_SlaveSetAddrIntHandler(I2C1_SlaveDefAddrInterruptHandler);
+[e ( _I2C1_SlaveSetAddrIntHandler (1 &U _I2C1_SlaveDefAddrInterruptHandler ]
+"122
+[; ;mcc_generated_files/i2c1_slave.c: 122:     I2C1_SlaveSetWrColIntHandler(I2C1_SlaveDefWrColInterruptHandler);
+[e ( _I2C1_SlaveSetWrColIntHandler (1 &U _I2C1_SlaveDefWrColInterruptHandler ]
+"123
+[; ;mcc_generated_files/i2c1_slave.c: 123:     I2C1_SlaveEnableIrq();
+[e ( _I2C1_SlaveEnableIrq ..  ]
+"124
+[; ;mcc_generated_files/i2c1_slave.c: 124: }
+[e :UE 355 ]
+}
+"126
+[; ;mcc_generated_files/i2c1_slave.c: 126: void I2C1_Close()
+[v _I2C1_Close `(v ~T0 @X0 1 ef ]
+"127
+[; ;mcc_generated_files/i2c1_slave.c: 127: {
+{
+[e :U _I2C1_Close ]
+[f ]
+"128
+[; ;mcc_generated_files/i2c1_slave.c: 128:     I2C1_SlaveClose();
+[e ( _I2C1_SlaveClose ..  ]
+"129
+[; ;mcc_generated_files/i2c1_slave.c: 129: }
+[e :UE 356 ]
+}
+"131
+[; ;mcc_generated_files/i2c1_slave.c: 131: uint8_t I2C1_Read()
+[v _I2C1_Read `(uc ~T0 @X0 1 ef ]
+"132
+[; ;mcc_generated_files/i2c1_slave.c: 132: {
+{
+[e :U _I2C1_Read ]
+[f ]
+"133
+[; ;mcc_generated_files/i2c1_slave.c: 133:    return I2C1_SlaveGetRxData();
+[e ) ( _I2C1_SlaveGetRxData ..  ]
+[e $UE 357  ]
+"134
+[; ;mcc_generated_files/i2c1_slave.c: 134: }
+[e :UE 357 ]
+}
+"136
+[; ;mcc_generated_files/i2c1_slave.c: 136: void I2C1_Write(uint8_t data)
+[v _I2C1_Write `(v ~T0 @X0 1 ef1`uc ]
+"137
+[; ;mcc_generated_files/i2c1_slave.c: 137: {
+{
+[e :U _I2C1_Write ]
+"136
+[; ;mcc_generated_files/i2c1_slave.c: 136: void I2C1_Write(uint8_t data)
+[v _data `uc ~T0 @X0 1 r1 ]
+"137
+[; ;mcc_generated_files/i2c1_slave.c: 137: {
+[f ]
+"138
+[; ;mcc_generated_files/i2c1_slave.c: 138:     I2C1_SlaveSendTxData(data);
+[e ( _I2C1_SlaveSendTxData (1 _data ]
+"139
+[; ;mcc_generated_files/i2c1_slave.c: 139: }
+[e :UE 358 ]
+}
+"141
+[; ;mcc_generated_files/i2c1_slave.c: 141: void I2C1_Enable()
+[v _I2C1_Enable `(v ~T0 @X0 1 ef ]
+"142
+[; ;mcc_generated_files/i2c1_slave.c: 142: {
+{
+[e :U _I2C1_Enable ]
+[f ]
+"143
+[; ;mcc_generated_files/i2c1_slave.c: 143:     I2C1_Initialize();
+[e ( _I2C1_Initialize ..  ]
+"144
+[; ;mcc_generated_files/i2c1_slave.c: 144: }
+[e :UE 359 ]
+}
+"146
+[; ;mcc_generated_files/i2c1_slave.c: 146: void I2C1_SendAck()
+[v _I2C1_SendAck `(v ~T0 @X0 1 ef ]
+"147
+[; ;mcc_generated_files/i2c1_slave.c: 147: {
+{
+[e :U _I2C1_SendAck ]
+[f ]
+"148
+[; ;mcc_generated_files/i2c1_slave.c: 148:     I2C1_SlaveSendAck();
+[e ( _I2C1_SlaveSendAck ..  ]
+"149
+[; ;mcc_generated_files/i2c1_slave.c: 149: }
+[e :UE 360 ]
+}
+"151
+[; ;mcc_generated_files/i2c1_slave.c: 151: void I2C1_SendNack()
+[v _I2C1_SendNack `(v ~T0 @X0 1 ef ]
+"152
+[; ;mcc_generated_files/i2c1_slave.c: 152: {
+{
+[e :U _I2C1_SendNack ]
+[f ]
+"153
+[; ;mcc_generated_files/i2c1_slave.c: 153:     I2C1_SlaveSendNack();
+[e ( _I2C1_SlaveSendNack ..  ]
+"154
+[; ;mcc_generated_files/i2c1_slave.c: 154: }
+[e :UE 361 ]
+}
+"156
+[; ;mcc_generated_files/i2c1_slave.c: 156: static void I2C1_Isr()
+[v _I2C1_Isr `(v ~T0 @X0 1 sf ]
+"157
+[; ;mcc_generated_files/i2c1_slave.c: 157: {
+{
+[e :U _I2C1_Isr ]
+[f ]
+"158
+[; ;mcc_generated_files/i2c1_slave.c: 158:     I2C1_SlaveClearIrq();
+[e ( _I2C1_SlaveClearIrq ..  ]
+"161
+[; ;mcc_generated_files/i2c1_slave.c: 161:     i2c1RdData = I2C1_SlaveGetRxData();
+[e = _i2c1RdData ( _I2C1_SlaveGetRxData ..  ]
+"163
+[; ;mcc_generated_files/i2c1_slave.c: 163:     if(I2C1_SlaveIsRead())
+[e $ ! != -> ( _I2C1_SlaveIsRead ..  `i -> 0 `i 363  ]
+"164
+[; ;mcc_generated_files/i2c1_slave.c: 164:     {
+{
+"165
+[; ;mcc_generated_files/i2c1_slave.c: 165:         i2c1State = I2C1_TX;
+[e = _i2c1State . `E2516 1 ]
+"166
+[; ;mcc_generated_files/i2c1_slave.c: 166:     }
+}
+[e $U 364  ]
+"167
+[; ;mcc_generated_files/i2c1_slave.c: 167:     else
+[e :U 363 ]
+"168
+[; ;mcc_generated_files/i2c1_slave.c: 168:     {
+{
+"169
+[; ;mcc_generated_files/i2c1_slave.c: 169:         i2c1State = I2C1_RX;
+[e = _i2c1State . `E2516 2 ]
+"170
+[; ;mcc_generated_files/i2c1_slave.c: 170:     }
+}
+[e :U 364 ]
+"172
+[; ;mcc_generated_files/i2c1_slave.c: 172:     switch(i2c1State)
+[e $U 366  ]
+"173
+[; ;mcc_generated_files/i2c1_slave.c: 173:     {
+{
+"174
+[; ;mcc_generated_files/i2c1_slave.c: 174:         case I2C1_TX:
+[e :U 367 ]
+"175
+[; ;mcc_generated_files/i2c1_slave.c: 175:             if(!I2C1_SlaveIsWriteCollision())
+[e $ ! ! != -> ( _I2C1_SlaveIsWriteCollision ..  `i -> 0 `i 368  ]
+"176
+[; ;mcc_generated_files/i2c1_slave.c: 176:             {
+{
+"177
+[; ;mcc_generated_files/i2c1_slave.c: 177:                 I2C1_SlaveWrCallBack();
+[e ( _I2C1_SlaveWrCallBack ..  ]
+"178
+[; ;mcc_generated_files/i2c1_slave.c: 178:             }
+}
+[e $U 369  ]
+"179
+[; ;mcc_generated_files/i2c1_slave.c: 179:             else
+[e :U 368 ]
+"180
+[; ;mcc_generated_files/i2c1_slave.c: 180:             {
+{
+"181
+[; ;mcc_generated_files/i2c1_slave.c: 181:                 I2C1_SlaveWrColCallBack();
+[e ( _I2C1_SlaveWrColCallBack ..  ]
+"182
+[; ;mcc_generated_files/i2c1_slave.c: 182:                 I2C1_SlaveRestart();
+[e ( _I2C1_SlaveRestart ..  ]
+"183
+[; ;mcc_generated_files/i2c1_slave.c: 183:             }
+}
+[e :U 369 ]
+"184
+[; ;mcc_generated_files/i2c1_slave.c: 184:             i2c1NextState = I2C1_ADDR;
+[e = _i2c1NextState . `E2516 0 ]
+"185
+[; ;mcc_generated_files/i2c1_slave.c: 185:             break;
+[e $U 365  ]
+"187
+[; ;mcc_generated_files/i2c1_slave.c: 187:         case I2C1_RX:
+[e :U 370 ]
+"188
+[; ;mcc_generated_files/i2c1_slave.c: 188:             if (I2C1_SlaveIsData())
+[e $ ! != -> ( _I2C1_SlaveIsData ..  `i -> 0 `i 371  ]
+"189
+[; ;mcc_generated_files/i2c1_slave.c: 189:             {
+{
+"192
+[; ;mcc_generated_files/i2c1_slave.c: 192:                     I2C1_SlaveRdCallBack();
+[e ( _I2C1_SlaveRdCallBack ..  ]
+"194
+[; ;mcc_generated_files/i2c1_slave.c: 194:             }
+}
+[e $U 372  ]
+"195
+[; ;mcc_generated_files/i2c1_slave.c: 195:             else
+[e :U 371 ]
+"196
+[; ;mcc_generated_files/i2c1_slave.c: 196:             {
+{
+"197
+[; ;mcc_generated_files/i2c1_slave.c: 197:                 I2C1_SlaveAddrCallBack();
+[e ( _I2C1_SlaveAddrCallBack ..  ]
+"198
+[; ;mcc_generated_files/i2c1_slave.c: 198:                 i2c1NextState = I2C1_ADDR;
+[e = _i2c1NextState . `E2516 0 ]
+"199
+[; ;mcc_generated_files/i2c1_slave.c: 199:             }
+}
+[e :U 372 ]
+"200
+[; ;mcc_generated_files/i2c1_slave.c: 200:             break;
+[e $U 365  ]
+"201
+[; ;mcc_generated_files/i2c1_slave.c: 201:         default:
+[e :U 373 ]
+"202
+[; ;mcc_generated_files/i2c1_slave.c: 202:             break;
+[e $U 365  ]
+"203
+[; ;mcc_generated_files/i2c1_slave.c: 203:     }
+}
+[e $U 365  ]
+[e :U 366 ]
+[e [\ -> _i2c1State `ui , $ -> . `E2516 1 `ui 367
+ , $ -> . `E2516 2 `ui 370
+ 373 ]
+[e :U 365 ]
+"204
+[; ;mcc_generated_files/i2c1_slave.c: 204:     i2c1State = i2c1NextState;
+[e = _i2c1State _i2c1NextState ]
+"205
+[; ;mcc_generated_files/i2c1_slave.c: 205:     I2C1_SlaveReleaseClock();
+[e ( _I2C1_SlaveReleaseClock ..  ]
+"206
+[; ;mcc_generated_files/i2c1_slave.c: 206: }
+[e :UE 362 ]
+}
+"209
+[; ;mcc_generated_files/i2c1_slave.c: 209: void I2C1_SlaveSetIsrHandler(interruptHandler handler)
+[v _I2C1_SlaveSetIsrHandler `(v ~T0 @X0 1 ef1`*F2597 ]
+"210
+[; ;mcc_generated_files/i2c1_slave.c: 210: {
+{
+[e :U _I2C1_SlaveSetIsrHandler ]
+"209
+[; ;mcc_generated_files/i2c1_slave.c: 209: void I2C1_SlaveSetIsrHandler(interruptHandler handler)
+[v _handler `*F2599 ~T0 @X0 1 r1 ]
+"210
+[; ;mcc_generated_files/i2c1_slave.c: 210: {
+[f ]
+"211
+[; ;mcc_generated_files/i2c1_slave.c: 211:     MSSP1_InterruptHandler = handler;
+[e = _MSSP1_InterruptHandler _handler ]
+"212
+[; ;mcc_generated_files/i2c1_slave.c: 212: }
+[e :UE 374 ]
+}
+"215
+[; ;mcc_generated_files/i2c1_slave.c: 215: void I2C1_SlaveSetReadIntHandler(interruptHandler handler) {
+[v _I2C1_SlaveSetReadIntHandler `(v ~T0 @X0 1 ef1`*F2602 ]
+{
+[e :U _I2C1_SlaveSetReadIntHandler ]
+[v _handler `*F2604 ~T0 @X0 1 r1 ]
+[f ]
+"216
+[; ;mcc_generated_files/i2c1_slave.c: 216:     I2C1_SlaveRdInterruptHandler = handler;
+[e = _I2C1_SlaveRdInterruptHandler _handler ]
+"217
+[; ;mcc_generated_files/i2c1_slave.c: 217: }
+[e :UE 375 ]
+}
+"219
+[; ;mcc_generated_files/i2c1_slave.c: 219: static void I2C1_SlaveRdCallBack() {
+[v _I2C1_SlaveRdCallBack `(v ~T0 @X0 1 sf ]
+{
+[e :U _I2C1_SlaveRdCallBack ]
+[f ]
+"221
+[; ;mcc_generated_files/i2c1_slave.c: 221:     if (I2C1_SlaveRdInterruptHandler)
+[e $ ! != _I2C1_SlaveRdInterruptHandler -> -> 0 `i `*F2607 377  ]
+"222
+[; ;mcc_generated_files/i2c1_slave.c: 222:     {
+{
+"223
+[; ;mcc_generated_files/i2c1_slave.c: 223:         I2C1_SlaveRdInterruptHandler();
+[e ( *U _I2C1_SlaveRdInterruptHandler ..  ]
+"224
+[; ;mcc_generated_files/i2c1_slave.c: 224:     }
+}
+[e :U 377 ]
+"225
+[; ;mcc_generated_files/i2c1_slave.c: 225: }
+[e :UE 376 ]
+}
+"227
+[; ;mcc_generated_files/i2c1_slave.c: 227: static void I2C1_SlaveDefRdInterruptHandler() {
+[v _I2C1_SlaveDefRdInterruptHandler `(v ~T0 @X0 1 sf ]
+{
+[e :U _I2C1_SlaveDefRdInterruptHandler ]
+[f ]
+"228
+[; ;mcc_generated_files/i2c1_slave.c: 228:     i2c1RdData = I2C1_SlaveGetRxData();
+[e = _i2c1RdData ( _I2C1_SlaveGetRxData ..  ]
+"229
+[; ;mcc_generated_files/i2c1_slave.c: 229: }
+[e :UE 378 ]
+}
+"232
+[; ;mcc_generated_files/i2c1_slave.c: 232: void I2C1_SlaveSetWriteIntHandler(interruptHandler handler) {
+[v _I2C1_SlaveSetWriteIntHandler `(v ~T0 @X0 1 ef1`*F2610 ]
+{
+[e :U _I2C1_SlaveSetWriteIntHandler ]
+[v _handler `*F2612 ~T0 @X0 1 r1 ]
+[f ]
+"233
+[; ;mcc_generated_files/i2c1_slave.c: 233:     I2C1_SlaveWrInterruptHandler = handler;
+[e = _I2C1_SlaveWrInterruptHandler _handler ]
+"234
+[; ;mcc_generated_files/i2c1_slave.c: 234: }
+[e :UE 379 ]
+}
+"236
+[; ;mcc_generated_files/i2c1_slave.c: 236: static void I2C1_SlaveWrCallBack() {
+[v _I2C1_SlaveWrCallBack `(v ~T0 @X0 1 sf ]
+{
+[e :U _I2C1_SlaveWrCallBack ]
+[f ]
+"238
+[; ;mcc_generated_files/i2c1_slave.c: 238:     if (I2C1_SlaveWrInterruptHandler)
+[e $ ! != _I2C1_SlaveWrInterruptHandler -> -> 0 `i `*F2615 381  ]
+"239
+[; ;mcc_generated_files/i2c1_slave.c: 239:     {
+{
+"240
+[; ;mcc_generated_files/i2c1_slave.c: 240:         I2C1_SlaveWrInterruptHandler();
+[e ( *U _I2C1_SlaveWrInterruptHandler ..  ]
+"241
+[; ;mcc_generated_files/i2c1_slave.c: 241:     }
+}
+[e :U 381 ]
+"242
+[; ;mcc_generated_files/i2c1_slave.c: 242: }
+[e :UE 380 ]
+}
+"244
+[; ;mcc_generated_files/i2c1_slave.c: 244: static void I2C1_SlaveDefWrInterruptHandler() {
+[v _I2C1_SlaveDefWrInterruptHandler `(v ~T0 @X0 1 sf ]
+{
+[e :U _I2C1_SlaveDefWrInterruptHandler ]
+[f ]
+"245
+[; ;mcc_generated_files/i2c1_slave.c: 245:     I2C1_SlaveSendTxData(i2c1WrData);
+[e ( _I2C1_SlaveSendTxData (1 _i2c1WrData ]
+"246
+[; ;mcc_generated_files/i2c1_slave.c: 246: }
+[e :UE 382 ]
+}
+"249
+[; ;mcc_generated_files/i2c1_slave.c: 249: void I2C1_SlaveSetAddrIntHandler(interruptHandler handler){
+[v _I2C1_SlaveSetAddrIntHandler `(v ~T0 @X0 1 ef1`*F2618 ]
+{
+[e :U _I2C1_SlaveSetAddrIntHandler ]
+[v _handler `*F2620 ~T0 @X0 1 r1 ]
+[f ]
+"250
+[; ;mcc_generated_files/i2c1_slave.c: 250:     I2C1_SlaveAddrInterruptHandler = handler;
+[e = _I2C1_SlaveAddrInterruptHandler _handler ]
+"251
+[; ;mcc_generated_files/i2c1_slave.c: 251: }
+[e :UE 383 ]
+}
+"253
+[; ;mcc_generated_files/i2c1_slave.c: 253: static void I2C1_SlaveAddrCallBack() {
+[v _I2C1_SlaveAddrCallBack `(v ~T0 @X0 1 sf ]
+{
+[e :U _I2C1_SlaveAddrCallBack ]
+[f ]
+"255
+[; ;mcc_generated_files/i2c1_slave.c: 255:     if (I2C1_SlaveAddrInterruptHandler) {
+[e $ ! != _I2C1_SlaveAddrInterruptHandler -> -> 0 `i `*F2623 385  ]
+{
+"256
+[; ;mcc_generated_files/i2c1_slave.c: 256:         I2C1_SlaveAddrInterruptHandler();
+[e ( *U _I2C1_SlaveAddrInterruptHandler ..  ]
+"257
+[; ;mcc_generated_files/i2c1_slave.c: 257:     }
+}
+[e :U 385 ]
+"258
+[; ;mcc_generated_files/i2c1_slave.c: 258: }
+[e :UE 384 ]
+}
+"260
+[; ;mcc_generated_files/i2c1_slave.c: 260: static void I2C1_SlaveDefAddrInterruptHandler() {
+[v _I2C1_SlaveDefAddrInterruptHandler `(v ~T0 @X0 1 sf ]
+{
+[e :U _I2C1_SlaveDefAddrInterruptHandler ]
+[f ]
+"261
+[; ;mcc_generated_files/i2c1_slave.c: 261:     i2c1SlaveAddr = I2C1_SlaveGetAddr();
+[e = _i2c1SlaveAddr ( _I2C1_SlaveGetAddr ..  ]
+"262
+[; ;mcc_generated_files/i2c1_slave.c: 262: }
+[e :UE 386 ]
+}
+"265
+[; ;mcc_generated_files/i2c1_slave.c: 265: void I2C1_SlaveSetWrColIntHandler(interruptHandler handler){
+[v _I2C1_SlaveSetWrColIntHandler `(v ~T0 @X0 1 ef1`*F2626 ]
+{
+[e :U _I2C1_SlaveSetWrColIntHandler ]
+[v _handler `*F2628 ~T0 @X0 1 r1 ]
+[f ]
+"266
+[; ;mcc_generated_files/i2c1_slave.c: 266:     I2C1_SlaveWrColInterruptHandler = handler;
+[e = _I2C1_SlaveWrColInterruptHandler _handler ]
+"267
+[; ;mcc_generated_files/i2c1_slave.c: 267: }
+[e :UE 387 ]
+}
+"269
+[; ;mcc_generated_files/i2c1_slave.c: 269: static void I2C1_SlaveWrColCallBack() {
+[v _I2C1_SlaveWrColCallBack `(v ~T0 @X0 1 sf ]
+{
+[e :U _I2C1_SlaveWrColCallBack ]
+[f ]
+"271
+[; ;mcc_generated_files/i2c1_slave.c: 271:     if ( I2C1_SlaveWrColInterruptHandler)
+[e $ ! != _I2C1_SlaveWrColInterruptHandler -> -> 0 `i `*F2631 389  ]
+"272
+[; ;mcc_generated_files/i2c1_slave.c: 272:     {
+{
+"273
+[; ;mcc_generated_files/i2c1_slave.c: 273:          I2C1_SlaveWrColInterruptHandler();
+[e ( *U _I2C1_SlaveWrColInterruptHandler ..  ]
+"274
+[; ;mcc_generated_files/i2c1_slave.c: 274:     }
+}
+[e :U 389 ]
+"275
+[; ;mcc_generated_files/i2c1_slave.c: 275: }
+[e :UE 388 ]
+}
+"277
+[; ;mcc_generated_files/i2c1_slave.c: 277: static void I2C1_SlaveDefWrColInterruptHandler() {
+[v _I2C1_SlaveDefWrColInterruptHandler `(v ~T0 @X0 1 sf ]
+{
+[e :U _I2C1_SlaveDefWrColInterruptHandler ]
+[f ]
+"278
+[; ;mcc_generated_files/i2c1_slave.c: 278: }
+[e :UE 390 ]
+}
+"281
+[; ;mcc_generated_files/i2c1_slave.c: 281: void I2C1_SlaveSetBusColIntHandler(interruptHandler handler){
+[v _I2C1_SlaveSetBusColIntHandler `(v ~T0 @X0 1 ef1`*F2634 ]
+{
+[e :U _I2C1_SlaveSetBusColIntHandler ]
+[v _handler `*F2636 ~T0 @X0 1 r1 ]
+[f ]
+"282
+[; ;mcc_generated_files/i2c1_slave.c: 282:     I2C1_SlaveBusColInterruptHandler = handler;
+[e = _I2C1_SlaveBusColInterruptHandler _handler ]
+"283
+[; ;mcc_generated_files/i2c1_slave.c: 283: }
+[e :UE 391 ]
+}
+"285
+[; ;mcc_generated_files/i2c1_slave.c: 285: static void I2C1_SlaveBusColCallBack() {
+[v _I2C1_SlaveBusColCallBack `(v ~T0 @X0 1 sf ]
+{
+[e :U _I2C1_SlaveBusColCallBack ]
+[f ]
+"287
+[; ;mcc_generated_files/i2c1_slave.c: 287:     if ( I2C1_SlaveBusColInterruptHandler)
+[e $ ! != _I2C1_SlaveBusColInterruptHandler -> -> 0 `i `*F2639 393  ]
+"288
+[; ;mcc_generated_files/i2c1_slave.c: 288:     {
+{
+"289
+[; ;mcc_generated_files/i2c1_slave.c: 289:          I2C1_SlaveBusColInterruptHandler();
+[e ( *U _I2C1_SlaveBusColInterruptHandler ..  ]
+"290
+[; ;mcc_generated_files/i2c1_slave.c: 290:     }
+}
+[e :U 393 ]
+"291
+[; ;mcc_generated_files/i2c1_slave.c: 291: }
+[e :UE 392 ]
+}
+"293
+[; ;mcc_generated_files/i2c1_slave.c: 293: static void I2C1_SlaveDefBusColInterruptHandler() {
+[v _I2C1_SlaveDefBusColInterruptHandler `(v ~T0 @X0 1 sf ]
+{
+[e :U _I2C1_SlaveDefBusColInterruptHandler ]
+[f ]
+"294
+[; ;mcc_generated_files/i2c1_slave.c: 294: }
+[e :UE 394 ]
+}
+[v F2642 `(a ~T0 @X0 1 tf ]
+"296
+[; ;mcc_generated_files/i2c1_slave.c: 296: static __attribute__((inline)) _Bool I2C1_SlaveOpen()
+[v _I2C1_SlaveOpen `TF2642 ~T0 @X0 1 s ]
+"297
+[; ;mcc_generated_files/i2c1_slave.c: 297: {
+{
+[e :U _I2C1_SlaveOpen ]
+[f ]
+"298
+[; ;mcc_generated_files/i2c1_slave.c: 298:     if(!SSP1CON1bits.SSPEN)
+[e $ ! ! != -> . . _SSP1CON1bits 0 5 `i -> 0 `i 396  ]
+"299
+[; ;mcc_generated_files/i2c1_slave.c: 299:     {
+{
+"300
+[; ;mcc_generated_files/i2c1_slave.c: 300:         SSP1STAT = 0x40;
+[e = _SSP1STAT -> -> 64 `i `uc ]
+"301
+[; ;mcc_generated_files/i2c1_slave.c: 301:         SSP1CON1 |= 0x16;
+[e =| _SSP1CON1 -> -> 22 `i `Vuc ]
+"302
+[; ;mcc_generated_files/i2c1_slave.c: 302:         SSP1CON2 = 0x00;
+[e = _SSP1CON2 -> -> 0 `i `uc ]
+"303
+[; ;mcc_generated_files/i2c1_slave.c: 303:         SSP1CON1bits.SSPEN = 1;
+[e = . . _SSP1CON1bits 0 5 -> -> 1 `i `uc ]
+"304
+[; ;mcc_generated_files/i2c1_slave.c: 304:         return 1;
+[e ) -> -> 1 `i `a ]
+[e $UE 395  ]
+"305
+[; ;mcc_generated_files/i2c1_slave.c: 305:     }
+}
+[e :U 396 ]
+"306
+[; ;mcc_generated_files/i2c1_slave.c: 306:     return 0;
+[e ) -> -> 0 `i `a ]
+[e $UE 395  ]
+"307
+[; ;mcc_generated_files/i2c1_slave.c: 307: }
+[e :UE 395 ]
+}
+[v F2644 `(v ~T0 @X0 1 tf ]
+"309
+[; ;mcc_generated_files/i2c1_slave.c: 309: static __attribute__((inline)) void I2C1_SlaveClose()
+[v _I2C1_SlaveClose `TF2644 ~T0 @X0 1 s ]
+"310
+[; ;mcc_generated_files/i2c1_slave.c: 310: {
+{
+[e :U _I2C1_SlaveClose ]
+[f ]
+"311
+[; ;mcc_generated_files/i2c1_slave.c: 311:     SSP1STAT = 0x40;
+[e = _SSP1STAT -> -> 64 `i `uc ]
+"312
+[; ;mcc_generated_files/i2c1_slave.c: 312:     SSP1CON1 |= 0x16;
+[e =| _SSP1CON1 -> -> 22 `i `Vuc ]
+"313
+[; ;mcc_generated_files/i2c1_slave.c: 313:     SSP1CON2 = 0x00;
+[e = _SSP1CON2 -> -> 0 `i `uc ]
+"314
+[; ;mcc_generated_files/i2c1_slave.c: 314:     SSP1CON1bits.SSPEN = 0;
+[e = . . _SSP1CON1bits 0 5 -> -> 0 `i `uc ]
+"315
+[; ;mcc_generated_files/i2c1_slave.c: 315: }
+[e :UE 397 ]
+}
+[v F2646 `(v ~T0 @X0 1 tf1`uc ]
+"317
+[; ;mcc_generated_files/i2c1_slave.c: 317: static __attribute__((inline)) void I2C1_SlaveSetSlaveAddr(uint8_t slaveAddr)
+[v _I2C1_SlaveSetSlaveAddr `TF2646 ~T0 @X0 1 s ]
+"318
+[; ;mcc_generated_files/i2c1_slave.c: 318: {
+{
+[e :U _I2C1_SlaveSetSlaveAddr ]
+"317
+[; ;mcc_generated_files/i2c1_slave.c: 317: static __attribute__((inline)) void I2C1_SlaveSetSlaveAddr(uint8_t slaveAddr)
+[v _slaveAddr `uc ~T0 @X0 1 r1 ]
+"318
+[; ;mcc_generated_files/i2c1_slave.c: 318: {
+[f ]
+"319
+[; ;mcc_generated_files/i2c1_slave.c: 319:     SSP1ADD = slaveAddr;
+[e = _SSP1ADD _slaveAddr ]
+"320
+[; ;mcc_generated_files/i2c1_slave.c: 320: }
+[e :UE 398 ]
+}
+[v F2649 `(v ~T0 @X0 1 tf1`uc ]
+"322
+[; ;mcc_generated_files/i2c1_slave.c: 322: static __attribute__((inline)) void I2C1_SlaveSetSlaveMask(uint8_t maskAddr)
+[v _I2C1_SlaveSetSlaveMask `TF2649 ~T0 @X0 1 s ]
+"323
+[; ;mcc_generated_files/i2c1_slave.c: 323: {
+{
+[e :U _I2C1_SlaveSetSlaveMask ]
+"322
+[; ;mcc_generated_files/i2c1_slave.c: 322: static __attribute__((inline)) void I2C1_SlaveSetSlaveMask(uint8_t maskAddr)
+[v _maskAddr `uc ~T0 @X0 1 r1 ]
+"323
+[; ;mcc_generated_files/i2c1_slave.c: 323: {
+[f ]
+"324
+[; ;mcc_generated_files/i2c1_slave.c: 324:     SSP1MSK = maskAddr;
+[e = _SSP1MSK _maskAddr ]
+"325
+[; ;mcc_generated_files/i2c1_slave.c: 325: }
+[e :UE 399 ]
+}
+[v F2652 `(v ~T0 @X0 1 tf ]
+"327
+[; ;mcc_generated_files/i2c1_slave.c: 327: static __attribute__((inline)) void I2C1_SlaveEnableIrq()
+[v _I2C1_SlaveEnableIrq `TF2652 ~T0 @X0 1 s ]
+"328
+[; ;mcc_generated_files/i2c1_slave.c: 328: {
+{
+[e :U _I2C1_SlaveEnableIrq ]
+[f ]
+"329
+[; ;mcc_generated_files/i2c1_slave.c: 329:     PIE1bits.SSP1IE = 1;
+[e = . . _PIE1bits 0 3 -> -> 1 `i `uc ]
+"330
+[; ;mcc_generated_files/i2c1_slave.c: 330: }
+[e :UE 400 ]
+}
+[v F2654 `(a ~T0 @X0 1 tf ]
+"332
+[; ;mcc_generated_files/i2c1_slave.c: 332: static __attribute__((inline)) _Bool I2C1_SlaveIsAddr()
+[v _I2C1_SlaveIsAddr `TF2654 ~T0 @X0 1 s ]
+"333
+[; ;mcc_generated_files/i2c1_slave.c: 333: {
+{
+[e :U _I2C1_SlaveIsAddr ]
+[f ]
+"334
+[; ;mcc_generated_files/i2c1_slave.c: 334:     return !(SSP1STATbits.D_nA);
+[e ) -> -> ! != -> . . _SSP1STATbits 0 5 `i -> 0 `i `i `a ]
+[e $UE 401  ]
+"335
+[; ;mcc_generated_files/i2c1_slave.c: 335: }
+[e :UE 401 ]
+}
+[v F2656 `(a ~T0 @X0 1 tf ]
+"337
+[; ;mcc_generated_files/i2c1_slave.c: 337: static __attribute__((inline)) _Bool I2C1_SlaveIsRead()
+[v _I2C1_SlaveIsRead `TF2656 ~T0 @X0 1 s ]
+"338
+[; ;mcc_generated_files/i2c1_slave.c: 338: {
+{
+[e :U _I2C1_SlaveIsRead ]
+[f ]
+"339
+[; ;mcc_generated_files/i2c1_slave.c: 339:     return (SSP1STATbits.R_nW);
+[e ) -> . . _SSP1STATbits 0 2 `a ]
+[e $UE 402  ]
+"340
+[; ;mcc_generated_files/i2c1_slave.c: 340: }
+[e :UE 402 ]
+}
+[v F2658 `(v ~T0 @X0 1 tf ]
+"342
+[; ;mcc_generated_files/i2c1_slave.c: 342: static __attribute__((inline)) void I2C1_SlaveClearIrq()
+[v _I2C1_SlaveClearIrq `TF2658 ~T0 @X0 1 s ]
+"343
+[; ;mcc_generated_files/i2c1_slave.c: 343: {
+{
+[e :U _I2C1_SlaveClearIrq ]
+[f ]
+"344
+[; ;mcc_generated_files/i2c1_slave.c: 344:     PIR1bits.SSP1IF = 0;
+[e = . . _PIR1bits 0 3 -> -> 0 `i `uc ]
+"345
+[; ;mcc_generated_files/i2c1_slave.c: 345: }
+[e :UE 403 ]
+}
+[v F2660 `(v ~T0 @X0 1 tf ]
+"347
+[; ;mcc_generated_files/i2c1_slave.c: 347: static __attribute__((inline)) void I2C1_SlaveReleaseClock()
+[v _I2C1_SlaveReleaseClock `TF2660 ~T0 @X0 1 s ]
+"348
+[; ;mcc_generated_files/i2c1_slave.c: 348: {
+{
+[e :U _I2C1_SlaveReleaseClock ]
+[f ]
+"349
+[; ;mcc_generated_files/i2c1_slave.c: 349:     SSP1CON1bits.CKP = 1;
+[e = . . _SSP1CON1bits 0 4 -> -> 1 `i `uc ]
+"350
+[; ;mcc_generated_files/i2c1_slave.c: 350: }
+[e :UE 404 ]
+}
+[v F2662 `(a ~T0 @X0 1 tf ]
+"352
+[; ;mcc_generated_files/i2c1_slave.c: 352: static __attribute__((inline)) _Bool I2C1_SlaveIsWriteCollision()
+[v _I2C1_SlaveIsWriteCollision `TF2662 ~T0 @X0 1 s ]
+"353
+[; ;mcc_generated_files/i2c1_slave.c: 353: {
+{
+[e :U _I2C1_SlaveIsWriteCollision ]
+[f ]
+"354
+[; ;mcc_generated_files/i2c1_slave.c: 354:     return SSP1CON1bits.WCOL;
+[e ) -> . . _SSP1CON1bits 0 7 `a ]
+[e $UE 405  ]
+"355
+[; ;mcc_generated_files/i2c1_slave.c: 355: }
+[e :UE 405 ]
+}
+[v F2664 `(a ~T0 @X0 1 tf ]
+"357
+[; ;mcc_generated_files/i2c1_slave.c: 357: static __attribute__((inline)) _Bool I2C1_SlaveIsData()
+[v _I2C1_SlaveIsData `TF2664 ~T0 @X0 1 s ]
+"358
+[; ;mcc_generated_files/i2c1_slave.c: 358: {
+{
+[e :U _I2C1_SlaveIsData ]
+[f ]
+"359
+[; ;mcc_generated_files/i2c1_slave.c: 359:     return SSP1STATbits.D_nA;
+[e ) -> . . _SSP1STATbits 0 5 `a ]
+[e $UE 406  ]
+"360
+[; ;mcc_generated_files/i2c1_slave.c: 360: }
+[e :UE 406 ]
+}
+[v F2666 `(v ~T0 @X0 1 tf ]
+"362
+[; ;mcc_generated_files/i2c1_slave.c: 362: static __attribute__((inline)) void I2C1_SlaveRestart(void)
+[v _I2C1_SlaveRestart `TF2666 ~T0 @X0 1 s ]
+"363
+[; ;mcc_generated_files/i2c1_slave.c: 363: {
+{
+[e :U _I2C1_SlaveRestart ]
+[f ]
+"364
+[; ;mcc_generated_files/i2c1_slave.c: 364:     SSP1CON2bits.RSEN = 1;
+[e = . . _SSP1CON2bits 0 1 -> -> 1 `i `uc ]
+"365
+[; ;mcc_generated_files/i2c1_slave.c: 365: }
+[e :UE 407 ]
+}
+[v F2668 `(a ~T0 @X0 1 tf ]
+"367
+[; ;mcc_generated_files/i2c1_slave.c: 367: static __attribute__((inline)) _Bool I2C1_SlaveIsTxBufEmpty()
+[v _I2C1_SlaveIsTxBufEmpty `TF2668 ~T0 @X0 1 s ]
+"368
+[; ;mcc_generated_files/i2c1_slave.c: 368: {
+{
+[e :U _I2C1_SlaveIsTxBufEmpty ]
+[f ]
+"369
+[; ;mcc_generated_files/i2c1_slave.c: 369:     return !SSP1STATbits.BF;
+[e ) -> -> ! != -> . . _SSP1STATbits 0 0 `i -> 0 `i `i `a ]
+[e $UE 408  ]
+"370
+[; ;mcc_generated_files/i2c1_slave.c: 370: }
+[e :UE 408 ]
+}
+[v F2670 `(a ~T0 @X0 1 tf ]
+"372
+[; ;mcc_generated_files/i2c1_slave.c: 372: static __attribute__((inline)) _Bool I2C1_SlaveIsRxBufFull()
+[v _I2C1_SlaveIsRxBufFull `TF2670 ~T0 @X0 1 s ]
+"373
+[; ;mcc_generated_files/i2c1_slave.c: 373: {
+{
+[e :U _I2C1_SlaveIsRxBufFull ]
+[f ]
+"374
+[; ;mcc_generated_files/i2c1_slave.c: 374:     return SSP1STATbits.BF;
+[e ) -> . . _SSP1STATbits 0 0 `a ]
+[e $UE 409  ]
+"375
+[; ;mcc_generated_files/i2c1_slave.c: 375: }
+[e :UE 409 ]
+}
+[v F2672 `(v ~T0 @X0 1 tf1`uc ]
+"377
+[; ;mcc_generated_files/i2c1_slave.c: 377: static __attribute__((inline)) void I2C1_SlaveSendTxData(uint8_t data)
+[v _I2C1_SlaveSendTxData `TF2672 ~T0 @X0 1 s ]
+"378
+[; ;mcc_generated_files/i2c1_slave.c: 378: {
+{
+[e :U _I2C1_SlaveSendTxData ]
+"377
+[; ;mcc_generated_files/i2c1_slave.c: 377: static __attribute__((inline)) void I2C1_SlaveSendTxData(uint8_t data)
+[v _data `uc ~T0 @X0 1 r1 ]
+"378
+[; ;mcc_generated_files/i2c1_slave.c: 378: {
+[f ]
+"379
+[; ;mcc_generated_files/i2c1_slave.c: 379:     SSP1BUF = data;
+[e = _SSP1BUF _data ]
+"380
+[; ;mcc_generated_files/i2c1_slave.c: 380: }
+[e :UE 410 ]
+}
+[v F2675 `(uc ~T0 @X0 1 tf ]
+"382
+[; ;mcc_generated_files/i2c1_slave.c: 382: static __attribute__((inline)) uint8_t I2C1_SlaveGetRxData()
+[v _I2C1_SlaveGetRxData `TF2675 ~T0 @X0 1 s ]
+"383
+[; ;mcc_generated_files/i2c1_slave.c: 383: {
+{
+[e :U _I2C1_SlaveGetRxData ]
+[f ]
+"384
+[; ;mcc_generated_files/i2c1_slave.c: 384:     return SSP1BUF;
+[e ) _SSP1BUF ]
+[e $UE 411  ]
+"385
+[; ;mcc_generated_files/i2c1_slave.c: 385: }
+[e :UE 411 ]
+}
+[v F2677 `(uc ~T0 @X0 1 tf ]
+"387
+[; ;mcc_generated_files/i2c1_slave.c: 387: static __attribute__((inline)) uint8_t I2C1_SlaveGetAddr()
+[v _I2C1_SlaveGetAddr `TF2677 ~T0 @X0 1 s ]
+"388
+[; ;mcc_generated_files/i2c1_slave.c: 388: {
+{
+[e :U _I2C1_SlaveGetAddr ]
+[f ]
+"389
+[; ;mcc_generated_files/i2c1_slave.c: 389:     return SSP1ADD;
+[e ) _SSP1ADD ]
+[e $UE 412  ]
+"390
+[; ;mcc_generated_files/i2c1_slave.c: 390: }
+[e :UE 412 ]
+}
+[v F2679 `(v ~T0 @X0 1 tf ]
+"392
+[; ;mcc_generated_files/i2c1_slave.c: 392: static __attribute__((inline)) void I2C1_SlaveSendAck()
+[v _I2C1_SlaveSendAck `TF2679 ~T0 @X0 1 s ]
+"393
+[; ;mcc_generated_files/i2c1_slave.c: 393: {
+{
+[e :U _I2C1_SlaveSendAck ]
+[f ]
+"394
+[; ;mcc_generated_files/i2c1_slave.c: 394:     SSP1CON2bits.ACKDT = 0;
+[e = . . _SSP1CON2bits 0 5 -> -> 0 `i `uc ]
+"395
+[; ;mcc_generated_files/i2c1_slave.c: 395:     SSP1CON2bits.ACKEN = 1;
+[e = . . _SSP1CON2bits 0 4 -> -> 1 `i `uc ]
+"396
+[; ;mcc_generated_files/i2c1_slave.c: 396: }
+[e :UE 413 ]
+}
+[v F2681 `(v ~T0 @X0 1 tf ]
+"398
+[; ;mcc_generated_files/i2c1_slave.c: 398: static __attribute__((inline)) void I2C1_SlaveSendNack()
+[v _I2C1_SlaveSendNack `TF2681 ~T0 @X0 1 s ]
+"399
+[; ;mcc_generated_files/i2c1_slave.c: 399: {
+{
+[e :U _I2C1_SlaveSendNack ]
+[f ]
+"400
+[; ;mcc_generated_files/i2c1_slave.c: 400:     SSP1CON2bits.ACKDT = 1;
+[e = . . _SSP1CON2bits 0 5 -> -> 1 `i `uc ]
+"401
+[; ;mcc_generated_files/i2c1_slave.c: 401:     SSP1CON2bits.ACKEN = 1;
+[e = . . _SSP1CON2bits 0 4 -> -> 1 `i `uc ]
+"402
+[; ;mcc_generated_files/i2c1_slave.c: 402: }
+[e :UE 414 ]
+}
